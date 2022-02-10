@@ -1,0 +1,33 @@
+query getComments($challenge_id: String!, $pagination: PaginationInput!) {
+    getChallengeComments(challenge_id: $challenge_id, pagination: $pagination) {
+      id
+      challenge_id
+      claps_count
+      profile {
+        id
+        username
+        profile_avatar
+      }
+      childComments {
+        id
+        text
+        created_at
+        claps_count
+        profile {
+          id
+          username
+          profile_avatar
+        }
+        claps{
+          profile_id
+          count
+        }
+      }
+      claps{
+        profile_id
+        count
+      }
+      created_at
+      text
+    }
+  }

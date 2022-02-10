@@ -1,0 +1,6 @@
+query getCity($data: CitiesInput!, $pagination: PaginationInput!) {
+  getCity(data: $data, pagination: $pagination) {
+    id
+    name
+  }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>83042139125-4jhm9elcdtu3b8hia549b497r831fp4s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.83042139125-4jhm9elcdtu3b8hia549b497r831fp4s</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>83042139125-2g2judlchimt5ttokdf9bpnq2t7lqomv.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBDFYr7Nz0R5c5UNBEFVjcMumUHw7RmacQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>83042139125</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.riderize</string>
+	<key>PROJECT_ID</key>
+	<string>riderize-1589917557347</string>
+	<key>STORAGE_BUCKET</key>
+	<string>riderize-1589917557347.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:83042139125:ios:e7e1917f110da6bbdf3ebc</string>
+	<key>DATABASE_URL</key>
+	<string>https://riderize-1589917557347.firebaseio.com</string>
+</dict>
+</plist>

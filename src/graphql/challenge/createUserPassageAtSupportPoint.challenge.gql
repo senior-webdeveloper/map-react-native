@@ -1,0 +1,8 @@
+mutation CreateUserPassageAtSupportPoint(
+  $passages_registered: [CreateUserEventSupportPointInput!]!
+) {
+  createUserPassageAtSupportPoint(passages_registered: $passages_registered) {
+    status
+    message
+  }
+}

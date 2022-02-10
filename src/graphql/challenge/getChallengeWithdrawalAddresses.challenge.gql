@@ -1,0 +1,22 @@
+# Write your query or mutation here
+query GetChallengeWithdrawalAddresses(
+$data: FindWithdrawalAddressesInput!
+) {
+  getChallengeWithdrawalAddresses(
+data: $data
+  ) {
+    name
+    id
+    zip_code
+    address_line_one
+    address_line_two
+    reference_point
+    city_id
+    city {
+      name
+      state {
+        abbreviation
+      }
+    }
+  }
+}

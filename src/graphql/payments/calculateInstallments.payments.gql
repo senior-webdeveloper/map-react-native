@@ -1,0 +1,5 @@
+query CalculateInstallments($data: InstallmentsInput!) {
+  calculateInstallments(data: $data) {
+    installments
+  }
+}

@@ -1,0 +1,20 @@
+mutation RegisterAppleUser(
+  $data: CreateAppleUserInput!
+){
+  registerAppleUser(data: $data) {
+    user {
+      id
+      staff
+      firstname
+      lastname
+      email
+    }
+    profile {
+      id
+      profile_avatar
+
+    }
+    accessToken
+    refreshToken
+  }
+}

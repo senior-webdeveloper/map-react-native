@@ -1,0 +1,38 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "configurations": {
+    "ios:release": {
+      "type": "ios.simulator",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/Riderize.app",
+      "build": "cd ios && xcodebuild -workspace Riderize.xcworkspace -configuration Release -scheme Riderize -sdk iphonesimulator -derivedDataPath build",
+      "device": {
+        "type": "iPhone 11"
+      }
+    },
+    "ios:debug": {
+      "type": "ios.simulator",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/Riderize.app",
+      "build": "cd ios && xcodebuild -workspace Riderize.xcworkspace -configuration Debug -scheme RiderizeDevelopment -sdk iphonesimulator -derivedDataPath build",
+      "device": {
+        "type": "iPhone 11"
+      }
+    },
+    "android:debug": {
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android ; ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug ; cd -",
+      "type": "android.emulator",
+      "device": {
+        "avdName": "emu"
+      }
+    },
+    "android:release": {
+      "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
+      "build": "cd android ; ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release ; cd -",
+      "type": "android.emulator",
+      "device": {
+        "avdName": "emu"
+      }
+    }
+  }
+}

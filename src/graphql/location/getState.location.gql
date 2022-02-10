@@ -1,0 +1,7 @@
+query getAllStates($pagination: PaginationInput!) {
+  getStates(pagination: $pagination) {
+    id
+    name
+    abbreviation
+  }
+}

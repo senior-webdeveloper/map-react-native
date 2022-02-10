@@ -1,0 +1,49 @@
+# Write your query or mutation here
+query getPaymentsOfASubscription($data: RetrieveSubscriptionPaymentsInput!) {
+  getPaymentsOfASubscription(data: $data) {
+    id
+    payment_id
+    award_id
+    payment {
+      id
+      interest_free_amount
+      pix_qrcode
+      pix_expiration_date
+      created_at
+      resource_payment_id
+      origin_payment_id
+      payment_processor_id
+      country_id
+      bill_expiration_date
+      value
+      is_paid
+      declined
+      returned
+      entrance
+      processed
+      processed
+      origin_resource_id
+      profile_id
+      user_id
+      status
+      installments
+      bill_link
+      created_at
+      updated_at
+      card {
+        last_digits
+        brand
+      }
+    }
+    award {
+      id
+      name
+      description
+      price
+      challenge_id
+      awardsImages {
+        link
+      }
+    }
+  }
+}

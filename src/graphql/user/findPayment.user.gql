@@ -1,0 +1,31 @@
+query findPayment($id: String!) {
+  findPayment(id: $id) {
+    id
+    resource_payment_id
+    origin_payment_id
+    payment_processor_id
+    country_id
+    bill_expiration_date
+    value
+    is_paid
+    declined
+    returned
+    entrance
+    processed
+    profile_id
+    user_id
+    bill_barcode
+    bill_link
+    status
+    created_at
+    updated_at
+    humanized_message
+    installments
+    pix_qrcode
+    pix_expiration_date
+    card {
+      last_digits
+      brand
+    }
+  }
+}

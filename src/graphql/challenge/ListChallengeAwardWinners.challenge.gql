@@ -1,0 +1,38 @@
+query ListChallengeAwardWinners(
+  $challenge_id: String!
+#  $pagination: PaginationInput!
+) {
+  listChallengeAwardWinners(
+    challenge_id: $challenge_id
+#    pagination: $pagination
+  ){
+    user {
+      id
+      firstname
+      lastname
+      legal_registry_number
+      zip_code
+      city {
+        name
+        state {
+          abbreviation
+        }
+      }
+      address_line_one
+      address_line_two
+      email
+      phone
+      profile {
+        id
+        username
+        profile_avatar
+      }
+    }
+    award {
+      name
+      awardsImages {
+        link
+      }
+    }
+  }
+}

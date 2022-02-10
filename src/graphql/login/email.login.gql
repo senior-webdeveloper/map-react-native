@@ -1,0 +1,17 @@
+ mutation loginEmailLogin($data: LoginUserInput!) {
+    login(data: $data) {
+      user {
+        id
+        firstname
+        lastname
+        email
+        profile {
+          id
+          profile_avatar
+        }
+        staff
+      }
+      accessToken
+      refreshToken
+    }
+  }

@@ -1,0 +1,27 @@
+
+fragment PaymentFragment on Payment {
+  id
+  resource_payment_id
+  origin_payment_id
+  payment_processor_id
+  country_id
+  bill_expiration_date
+  value
+  is_paid
+  declined
+  returned
+  entrance
+  processed
+  processed
+  profile_id
+  user_id
+  status
+  installments
+  bill_link
+  created_at
+  updated_at
+  card {
+    last_digits
+    brand
+  }
+}

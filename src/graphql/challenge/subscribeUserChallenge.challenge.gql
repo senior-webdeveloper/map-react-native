@@ -1,0 +1,18 @@
+mutation subscribeUserChallenge(
+  $award_data: ChallengePaymentInput
+  $payment_data: PaymentInput
+  $challenge_award_requests: [ChallengeAwardAdditionalRequestInput!]
+  $data: SubscribeUserChallengeInput!
+  $products_purchased: [ProductPurchasedInput!]
+) {
+  subscribeUserChallenge(
+    award_data:$award_data,
+    payment_data: $payment_data,
+    challenge_award_requests:$challenge_award_requests,
+    data: $data,
+    products_purchased: $products_purchased
+  ) {
+    registration_date
+    payment_id
+  }
+}

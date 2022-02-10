@@ -1,0 +1,5 @@
+mutation FollowProfile($data: FollowProfileInput!) {
+  followProfile(data: $data) {
+    _id
+  }
+}

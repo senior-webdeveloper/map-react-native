@@ -1,0 +1,18 @@
+ mutation RegisterGoogleUser($data: CreateGoogleUserInput!) {
+    registerGoogleUser(data: $data) {
+      user {
+        id
+        staff
+        firstname
+        lastname
+        email
+      }
+      profile {
+        id
+        profile_avatar
+        profile_cover
+      }
+      accessToken
+      refreshToken
+    }
+  }

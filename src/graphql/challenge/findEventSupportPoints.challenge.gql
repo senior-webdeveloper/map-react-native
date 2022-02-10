@@ -1,0 +1,8 @@
+query FindEventSupportPoints($challenge_id: String!) {
+  findEventSupportPoints(challenge_id: $challenge_id) {
+    id
+    name
+    latitude
+    longitude
+  }
+}

@@ -1,0 +1,15 @@
+mutation buyProduct(
+  $payment_data: PaymentInput!
+  $user_data: ChallengeUserDataInput!
+  $products_chosen: [BuyProductInput!]!
+) {
+  buyProduct(
+    payment_data: $payment_data
+    user_data: $user_data
+    products_chosen: $products_chosen
+  ) {
+    message
+    status
+    payment_id
+  }
+}

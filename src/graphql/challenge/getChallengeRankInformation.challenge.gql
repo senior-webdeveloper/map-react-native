@@ -1,0 +1,72 @@
+query GetChallengeRankInformation($challenge_id:String!){
+  getChallengeRankInformation(challenge_id: $challenge_id) {
+    subscribed_highlights {
+      highlight_by_greater_distance {
+        total_distance
+        user {
+          firstname
+          lastname
+          profile {
+            profile_avatar
+            username
+            user_id
+          }
+        }
+      }
+      highlight_by_greater_altimetry {
+        total_altimetry
+        user {
+          firstname
+          lastname
+          profile {
+            profile_avatar
+            username
+            user_id
+          }
+        }
+      }
+      highlight_by_greater_ride {
+        user {
+          firstname
+          lastname
+          profile {
+            profile_avatar
+            username
+            user_id
+          }
+        }
+        activities {
+          activity {
+            name
+            distance
+          }
+        }
+      }
+      highlight_by_greater_total_time{
+        total_time_seconds
+        user {
+          firstname
+          lastname
+          profile {
+            profile_avatar
+            username
+            user_id
+          }
+        }
+      }
+    }
+    challenge_statistics {
+      total_distance
+      total_altimetry
+      total_time_ride
+      total_rides
+    }
+    participants_statistics {
+      count_subscribers
+      count_followed_by_me
+      count_who_followe_me
+      count_gender_male
+      count_gender_female
+    }
+  }
+}

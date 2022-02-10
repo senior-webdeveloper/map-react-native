@@ -1,0 +1,27 @@
+query FindAllUsersCurrentPoint($challenge_id: String!) {
+  findAllUsersCurrentPoint(challenge_id: $challenge_id) {
+    check_time
+    event_support_point_id
+    support_point {
+      name
+    }
+    subscription {
+      athlete_identification
+      short_id
+      category {
+        id
+        order
+        name
+      }
+      user {
+        firstname
+        lastname
+
+        profile {
+
+          profile_avatar
+        }
+      }
+    }
+  }
+}

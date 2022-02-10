@@ -1,0 +1,6 @@
+mutation markSubscriptionAsWithdrawn($data: MarkSubscriptionAsWithdrawnInput!) {
+  markSubscriptionAsWithdrawn(data: $data) {
+    id
+    withdrawal_date
+  }
+}

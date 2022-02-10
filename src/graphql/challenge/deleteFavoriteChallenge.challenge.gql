@@ -1,0 +1,3 @@
+mutation deleteFavoriteChallenge($data: FavoriteUserChallengeInput!){
+  deleteFavoriteChallenge(data: $data)
+}

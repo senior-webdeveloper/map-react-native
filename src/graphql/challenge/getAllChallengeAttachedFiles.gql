@@ -1,0 +1,13 @@
+query allChallengeAttachedFiles(
+$pagination: PaginationInput!
+$challenge_id: String!
+) {
+  allChallengeAttachedFiles(pagination: $pagination
+challenge_id: $challenge_id) {
+  id
+  name
+  description
+  extension
+  link
+}
+}

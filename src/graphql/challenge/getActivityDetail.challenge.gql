@@ -1,0 +1,43 @@
+query GetActivityDetail($id: String!) {
+  getActivityDetail(id: $id) {
+    name
+    distance
+    resource_state
+    external_id
+    third_party_data_source_slug
+    upload_id
+    total_elevation_gain
+    distance
+    moving_time_seconds
+    id
+    activity_sent_third_party {
+      third_party_data_source_id
+      done
+    }
+    average_speed
+    suspicious
+    duplicated
+    calories
+    start_date
+    start_date_local
+    elapsed_time_seconds
+    polyline
+    bounds
+    summary_polyline
+    challenges {
+      id
+      name
+      image_avatar
+    }
+   user {
+      id
+      firstname
+      lastname
+      profile {
+        id
+        username
+        profile_avatar
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+query GetUserNotifications($pagination: PaginationInput!, $data: ListUserNotificationsInput!){
+  getUserNotifications(data: $data, pagination: $pagination) {
+    date
+    unread_notifications_count
+    notifications {
+      _id
+      recipient_id
+      notification_content
+      sender_username
+      sender_profile_avatar
+      read
+      deep_linking
+      media_url
+      created_at
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation updateUserDataCompiled($data: UpdateUserDataCompiledInput!) {
+  updateUserDataCompiled(data: $data) {
+    _id
+  }
+}

@@ -1,0 +1,5 @@
+mutation deleteCard(
+$id: String!
+) {
+  deleteCard(id: $id)
+}

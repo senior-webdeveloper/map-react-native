@@ -1,0 +1,9 @@
+mutation CreateCommentClap(
+$data: CreateCommentClapInput!
+){
+  createCommentClap(data: $data) {
+    challenge_comment_id
+    profile_id
+    count
+  }
+}

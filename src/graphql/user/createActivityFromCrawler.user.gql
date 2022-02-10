@@ -1,0 +1,6 @@
+mutation CreateActivityFromCrawler($activityKey: String!) {
+  createActivityFromCrawler(activityKey: $activityKey) {
+    status
+    message
+  }
+}

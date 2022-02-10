@@ -1,0 +1,60 @@
+query SearchUsers($pagination: PaginationInput!, $search_text: String!) {
+  searchUsers(pagination:$pagination search_text: $search_text) {
+    users {
+      id
+      firstname
+      lastname
+      email
+      gender
+      stature
+      weight
+      phone
+      date_of_birth
+      has_social_login
+      city_id
+      city {
+        id
+        name
+        slug
+        status
+        id_locale
+        state {
+          abbreviation
+        }
+      }
+      active
+      address_line_one
+      address_line_two
+      street_number
+      legal_registry_number
+      zip_code
+      strava_permission_activities
+      staff
+      blacklist
+      team_name
+      created_at
+      updated_at
+      profile {
+        id
+        username
+        followers_count
+        following_count
+        official
+        profile_avatar
+        profile_cover
+        description
+        user_id
+        is_follower
+      }
+      count_challenges_participates
+      activities_count
+    }
+    page_info {
+      current_page
+      offset
+      total_item_count
+      has_next_page
+      has_previous_page
+    }
+  }
+}

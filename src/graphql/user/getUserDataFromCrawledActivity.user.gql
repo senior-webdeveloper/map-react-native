@@ -1,0 +1,14 @@
+query GetUserDataFromCrawledActivity($url: String!) {
+  getUserDataFromCrawledActivity(url: $url) {
+    name
+    avatar
+    type
+    distance
+    time
+    elevation
+    date
+    address
+    person_name
+    key
+  }
+}

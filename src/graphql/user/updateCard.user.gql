@@ -1,0 +1,10 @@
+# Write your query or mutation here
+mutation UpdateCard(
+$data: UpdateCardInput!
+$id: String!
+) {
+  updateCard(data: $data, id: $id) {
+    id
+    name
+  }
+}

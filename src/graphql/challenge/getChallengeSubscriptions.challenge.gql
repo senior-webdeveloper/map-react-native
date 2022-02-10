@@ -1,0 +1,15 @@
+query GetChallengeSubscriptions($challenge_id: String!) {
+  getChallengeSubscriptions(challenge_id: $challenge_id){
+    user {
+      id
+      firstname
+      lastname
+      profile {
+        id
+        username
+        profile_avatar
+      }
+    }
+     registration_date
+  }
+}

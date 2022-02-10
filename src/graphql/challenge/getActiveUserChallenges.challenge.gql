@@ -1,0 +1,25 @@
+query GetActiveUserChallenges(
+  $pagination: PaginationInput!
+  $user_id: String
+  $profile_id: String!
+) {
+  getActiveUserChallenges(
+    pagination: $pagination
+    profile_id: $profile_id
+    user_id: $user_id
+  ) {
+    id
+    name
+    challenge_type
+    id
+    creator_id
+    image_avatar
+    image_cover
+    isFavorite
+    creator {
+      profile {
+        profile_avatar
+      }
+    }
+  }
+}

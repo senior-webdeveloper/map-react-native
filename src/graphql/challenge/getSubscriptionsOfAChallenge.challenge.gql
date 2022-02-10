@@ -1,0 +1,37 @@
+query getSubscriptionsOfAChallenge(
+  $pagination: PaginationInput!
+  $data: ListChallengeSubscriptionsInput!
+) {
+  getSubscriptionsOfAChallenge(pagination: $pagination, data: $data) {
+    page_info {
+      current_page
+      offset
+      total_item_count
+      has_next_page
+      has_previous_page
+    }
+
+    subscriptions {
+      id
+      paid
+      short_id
+      last_payment {
+        status
+      }
+      user {
+        id
+        profile {
+          profile_avatar
+        }
+        firstname
+        lastname
+        city {
+          name
+          state {
+            name
+          }
+        }
+      }
+    }
+  }
+}

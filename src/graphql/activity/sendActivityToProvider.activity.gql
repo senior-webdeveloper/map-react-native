@@ -1,0 +1,6 @@
+mutation SendActivityToProvider($data: SendActivityToProviderInput!){
+  sendActivityToProvider(data: $data){
+    status
+    message
+  }
+}

@@ -1,0 +1,24 @@
+query	getChallengeRanks($pagination: PaginationInput! $data: GetRanksInput!){
+  getChallengeRanks(data:$data, pagination: $pagination) {
+    id
+    user_id
+    registration_date
+    end_date
+    total_time_seconds
+    total_distance
+    total_altimetry
+    total_rides
+    classification
+    user {
+      id
+      firstname
+      lastname
+      profile {
+        id
+        username
+        profile_avatar
+      }
+    }
+    completed
+  }
+}

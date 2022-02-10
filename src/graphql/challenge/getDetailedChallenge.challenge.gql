@@ -1,0 +1,338 @@
+query GetChallengeDetail($data: GetChallengeDetailInput!) {
+  getChallengeDetail(data: $data) {
+    id
+    name
+    creator_id
+    start_date_registration
+    end_date_registration
+    temporarily_unavailable
+    start_date
+    end_date
+    description
+    challenge_type
+    image_avatar
+    image_cover
+    claps_count
+    count_comments
+    count_subscribe
+    count_view
+    physical_event
+    date_for_drawn
+    user_extraordinary_actions {
+      id
+      user_id
+      bonus_subscription
+      buy_after_registration_closes
+    }
+    subscription_prices {
+      id
+      challenge_id
+      value
+      date_initial
+      active
+      created_at
+      updated_at
+    }
+    support_points {
+      id
+      name
+      latitude
+      longitude
+    }
+    products {
+      id
+      only_award
+      awards_products {
+        award_id
+      }
+      name
+      description
+      date_initial
+      date_end
+      available
+      order
+      has_cost
+      allow_buy_without_subscription
+      free_field
+      only_award
+      active
+      prices {
+        value
+        date_initial
+        active
+      }
+      images {
+        link
+        order
+        active
+      }
+      challenge_id
+      variations {
+        id
+        product_id
+        text
+        description
+        available_quantity
+        available
+        order
+        active
+        prices {
+          value
+          date_initial
+          active
+        }
+        images {
+          link
+          order
+          active
+        }
+      }
+    }
+    challenge_images {
+      id
+      link
+      order
+    }
+    has_categories
+    challenge_categories {
+      id
+      name
+      description
+      category_configuration {
+        max_altimetry_goal_value
+        altimetry_goal_value
+        max_distance_goal_value
+        distance_goal_value
+      }
+    }
+
+    company {
+      id
+      fantasy_name
+      profile {
+        profile_avatar
+      }
+    }
+    configuration {
+      altimetry_goal_value
+      max_altimetry_goal_value
+      distance_goal_value
+      max_distance_goal_value
+      unique_ride
+      accumulation
+      is_paid
+      classification_by_award
+      max_time_goal_value
+      min_time_goal_value
+      allows_category_change
+      has_paid_kit
+      deadline_category_change
+    }
+    claps {
+      profile_id
+      count
+    }
+    user_challenges {
+      id
+      user_id
+      completed
+      registration_date
+      classification
+      paid
+      amount_paid
+      amount_to_pay
+      ready_to_withdraw
+      withdrawal_date
+      short_id
+      created_at
+      subscription_status {
+        status_description {
+          id
+          code
+          name
+          description
+          translations {
+            language_code
+            name
+            description
+          }
+        }
+      }
+      products_bought {
+        id
+        value
+        quantity
+        free_value
+        user_challenge_id
+        related_payment {
+          payment {
+            is_paid
+          }
+        }
+        product {
+          id
+          name
+        }
+        variation {
+          id
+          images {
+            id
+            link
+            active
+          }
+          text
+          description
+        }
+      }
+      withdrawal_address {
+        id
+        name
+        challenge_id
+        zip_code
+        address_line_one
+        address_line_two
+        reference_point
+      }
+      last_payment_id
+      category {
+        id
+        name
+        description
+        category_configuration {
+          max_altimetry_goal_value
+          altimetry_goal_value
+          max_distance_goal_value
+          distance_goal_value
+          maximum_time_goal_value
+          minimum_time_goal_value
+        }
+      }
+    }
+    awards {
+      id
+      position
+      name
+      description
+      price
+      quantity
+      only_for_draw
+      awards_products {
+        product {
+          name
+          images {
+                    link
+                    order
+                  }
+        }
+
+      }
+      award_volumes {
+        id
+        height
+        width
+        weight
+        depth
+      }
+      awardsImages {
+        order
+        link
+      }
+    }
+    winners {
+      award {
+        name
+        awardsImages {
+          link
+        }
+      }
+      user {
+        firstname
+        lastname
+        id
+        profile {
+          profile_avatar
+        }
+      }
+    }
+    challenges_attached_files {
+      id
+      name
+      description
+      extension
+      link
+    }
+    challenges_external_links_attached {
+      id
+      name
+      description
+      favicon_image_link
+      link
+    }
+    isFavorite
+    summary {
+      count_subscribe
+      count_claps
+      count_comments
+    }
+    temporarily_unavailable
+    company {
+      zip_code
+    }
+
+    products_purchased_without_subscription {
+      id
+      product_id
+      value
+      free_value
+      product_variation_id
+      canceled
+      quantity
+      related_payment {
+        payment {
+          id
+          created_at
+          resource_payment_id
+          origin_payment_id
+          payment_processor_id
+          country_id
+          bill_expiration_date
+          value
+          is_paid
+          declined
+          pix_qrcode
+          pix_expiration_date
+          returned
+          entrance
+          processed
+          profile_id
+          user_id
+          bill_barcode
+          bill_link
+          status
+          created_at
+          updated_at
+          humanized_message
+          installments
+          card {
+            last_digits
+            brand
+          }
+        }
+      }
+      product {
+        name
+        description
+      }
+      variation {
+        id
+        text
+        description
+        images {
+          id
+          link
+          order
+        }
+      }
+    }
+  }
+}

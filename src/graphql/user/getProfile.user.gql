@@ -1,0 +1,47 @@
+query getProfile($data: GetProfileDetailInput!) {
+  getProfile(data: $data) {
+    id
+    user_id
+    username
+    followers_count
+    following_count
+    official
+    profile_avatar
+    profile_cover
+    description
+    is_follower
+    user {
+      phone
+      street_number
+      id
+      email
+      staff
+      city {
+        id
+        name
+        state {
+          abbreviation
+          id
+        }
+      }
+      count_challenges_participates
+      last_challenge {
+        name
+      }
+      activities_count
+      firstname
+      lastname
+      gender
+      stature
+      date_of_birth
+      weight
+      address_line_one
+      address_line_two
+      legal_registry_number
+      zip_code
+      has_social_login
+      blacklist
+      team_name
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# Write your query or mutation here
+query getProductsAcquired($data: GetProductsAcquiredInput!) {
+  getProductsAcquired(data: $data) {
+    id
+    product_id
+    value
+    free_value
+    product_variation_id
+    canceled
+    quantity
+    related_payment {
+      payment {
+        id
+        created_at
+        resource_payment_id
+        origin_payment_id
+        payment_processor_id
+        country_id
+        bill_expiration_date
+        value
+        is_paid
+        declined
+        returned
+        entrance
+        processed
+        profile_id
+        user_id
+        bill_barcode
+        bill_link
+        status
+        created_at
+        updated_at
+        humanized_message
+        installments
+        card {
+          last_digits
+          brand
+        }
+      }
+    }
+    product {
+      name
+      description
+    }
+    variation {
+      id
+      text
+      description
+      images {
+        id
+        link
+        order
+      }
+    }
+  }
+}

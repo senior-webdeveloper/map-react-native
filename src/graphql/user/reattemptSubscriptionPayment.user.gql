@@ -1,0 +1,13 @@
+mutation reattemptSubscriptionPayment(
+  $award_data: ChallengePaymentInput!
+  $payment_data: PaymentInput!
+) {
+  reattemptSubscriptionPayment(
+    award_data: $award_data
+    payment_data: $payment_data
+  ) {
+    title
+    message
+    payment_id
+  }
+}

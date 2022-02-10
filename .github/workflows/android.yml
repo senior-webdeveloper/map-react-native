@@ -1,0 +1,68 @@
+# name: Android
+
+# on:
+#   push:
+#     # Sequence of patterns matched against refs/heads
+#     branches:
+#       # Push events on master branch
+#       - master
+#       - staging
+#       - feature/*
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+#     steps:
+#     - name: Checkout project
+#       uses: actions/checkout@v1
+
+#     - name: Specify node version
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: 12
+
+#     - name: Use specific Java version for sdkmanager to work
+#       uses: joschi/setup-jdk@v1
+#       with:
+#         java-version: 'openjdk8'
+#         architecture: 'x64'
+
+#     - name: Download Android Emulator Image
+#       run: |
+#         echo y | sudo $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-28;google_apis;x86_64" > /dev/null
+#         $ANDROID_HOME/tools/bin/avdmanager -s create avd -n emu -k "system-images;android-28;google_apis;x86_64" -b "x86_64" -c 1G -d 7 -f
+#     - name: Install node_modules
+#       run: |
+#         yarn install --frozen-lockfile
+# #     - name: Fastlane setup
+# #       run: |
+# #         sudo gem install fastlane -NV
+# #     - name: Build
+# #       working-directory: packages/mobile/android
+# #       env:
+# #         KEYSTORE: ${{ secrets.ANDROID_KEYSTORE }}
+# #         AT: ${{ secrets.ANDROID_TOKEN }}
+# #         android_keystore_pw: ${{ secrets.android_keystore_pw }}
+# #         android_pw: ${{ secrets.android_pw }}
+# #         android_alias: ${{ secrets.android_alias }}
+# #       run: |
+# #         echo "$KEYSTORE" | xxd -r -p - > app/release.keystore
+# #         echo $AT > ~/play_api_key_rn_spaceviewer.json
+# #         fastlane android detox
+# #         rm -f ~/play_api_key_rn_spaceviewer.json
+# #         rm -f app/release.keystore
+#     - name: Test
+#       timeout-minutes: 10
+#       run: |
+#         export PATH=$PATH:$ANDROID_HOME/platform-tools
+#         $ANDROID_HOME/emulator/emulator @emu -no-boot-anim &
+#         adb wait-for-device; adb shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'; adb shell wm dismiss-keyguard
+#         mkdir -p ./artifacts
+#         yarn e2e:android-release
+#     - uses: actions/upload-artifact@v1
+#       if: failure()
+#       with:
+#         name: e2e-test-videos
+#         path: packages/mobile/artifacts

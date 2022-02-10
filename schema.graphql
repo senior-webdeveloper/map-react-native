@@ -1,0 +1,2201 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Activity {
+  achievement_count: Float
+  athlete_count: Float
+  average_cadence: Float
+  average_heartrate: Float
+  average_speed: Float
+  average_temp: Float
+  average_watts: Float
+  bounds: [[Float]]
+  calories: Float
+  carbohydrate_percentage: Float
+  challenges: [Challenge!]!
+  comment_count: Float
+  commute: Boolean
+  created_at: CacheDate!
+  description: String
+  device_name: String
+  device_watts: Boolean
+  display_hide_heartrate_option: Boolean
+  distance: Float
+  duplicated: Boolean!
+  elapsed_time: Float
+  elev_high: Boolean
+  elev_low: Boolean
+  end_latitude: Float
+  end_longitude: String
+  extension_file: String
+  external_id: String
+  fat_percentage: Float
+  flagged: Boolean
+  gear_id: String
+  has_heartrate: Boolean
+  has_kudoed: Boolean
+  heartrate_opt_out: Boolean
+  id: ID!
+  is_private: Boolean!
+  kilojoules: Float
+  kudos_count: Float
+  leaderboard_opt_out: Boolean
+  location_city: String
+  location_country: String
+  location_state: String
+  low_fidelity_origin: Boolean!
+  manual: Boolean
+  max_heartrate: Float
+  max_speed: Float
+  max_watts: Boolean
+  moving_time: Float
+  name: String
+  perceived_exertion: Float
+  photo_count: Float
+  photo_image_primary: String
+  polyline: String
+  pr_count: Boolean
+  prefer_perceived_exertion: Boolean
+  private_profile: Boolean
+  protein_percentage: Float
+  provider_id: String
+  resource_state: Float
+  segment_leaderboard_opt_out: Boolean
+  start_date: CacheDate
+  start_date_local: CacheDate
+  start_latitude: Float
+  start_longitude: Float
+  suffer_score: String
+  summary_polyline: String
+  suspicious: Boolean!
+  thir_party_data_source: ThirdPartyProvider!
+  third_party_data_source_slug: String
+  timezone: Float
+  total_ascent: Float
+  total_cycles: Float
+  total_descent: Float
+  total_elevation_gain: Float
+  total_photo_count: Boolean
+  trainer: Boolean
+  type: String
+  upload_id: String
+  url_original_file: String
+  user_id: String
+  utc_offset: Float
+  visibility: String
+  weighted_average_watts: Float
+  workout_type: Float
+}
+
+type AdditionalRequest {
+  expiration_date: CacheDate
+  free_field: Boolean!
+  has_cost: Boolean!
+  id: ID!
+  image_reference: String
+  order: Float!
+  possible_request_response: [PossiblelRequestResponse!]!
+  price_request: Float
+  request: String!
+}
+
+type AppData {
+  _id: ID!
+  latest_version_code_push: String!
+  latest_version_store: String!
+  platform: String!
+}
+
+type AwardAdditionalRequests {
+  additional_request: AdditionalRequest
+  additional_request_id: String!
+}
+
+type AwardSubscription {
+  award: ChallengeAwards!
+  award_id: String!
+  challenge_id: String
+  user_challenge_id: String!
+  user_id: String
+}
+
+type AwardVolume {
+  active: Boolean!
+  award_id: String!
+  created_at: CacheDate!
+  depth: Float!
+  description: String
+  height: Float!
+  id: ID!
+  name: String!
+  updated_at: CacheDate!
+  weight: Float!
+  width: Float!
+}
+
+type Bank {
+  compe_brazil: Float!
+  id: ID!
+  ispb_brazil: Float!
+  name_long: String!
+  name_short: String!
+  swift_code: String!
+}
+
+type BestResultsAwardsResponse {
+  awards: [ChallengeAwards!]
+  title: String!
+}
+
+type BestResultsChallengesResponse {
+  challenges: [Challenge!]
+  title: String!
+}
+
+type Card {
+  brand: String!
+  expiration_date: Float!
+  external_id: String!
+  first_digits: Float!
+  holder_name: String!
+  id: String!
+  last_digits: Float!
+  legal_holder_number: String!
+  main: Boolean
+  name: String!
+  valid: Boolean!
+}
+
+type CategoryConfiguration {
+  altimetry_goal_value: Float
+  challenge_category_id: String
+  distance_goal_value: Float
+  max_altimetry_goal_value: Float
+  max_distance_goal_value: Float
+  maximum_time_goal_value: Int
+  minimum_time_goal_value: Int
+}
+
+type Challenge {
+  accept_installments: Boolean!
+  awards: [ChallengeAwards!]
+  challenge_categories: [ChallengeCategories!]!
+  challenge_images: [ChallengeImages!]!
+  challenge_type: String!
+  challenges_attached_files: [ChallengeAttachedFiles!]!
+  challenges_external_links_attached: [ChallengeExternalLinksAttached!]!
+  claps: [Clap!]
+  claps_count: Float!
+  comments: [Comment!]
+  company: Company!
+  company_id: String
+  configuration: ChallengeConfiguration
+  count_comments: Float!
+  count_subscribe: Float!
+  count_unsubscribed: Float!
+  count_view: Float!
+  creator: User!
+  creator_id: String
+  date_for_drawn: CacheDate
+  date_of_drawn: CacheDate
+  description: String!
+  eligible_spotlight: Boolean
+  end_date: CacheDate!
+  end_date_registration: CacheDate!
+  has_achievement: Boolean!
+  has_categories: Boolean
+  id: ID!
+  image_avatar: String!
+  image_cover: String!
+  image_spotlight: String
+  internal_test: Boolean!
+  isFavorite: Boolean
+  launch_date: CacheDate
+  name: String!
+  physical_event: Boolean!
+  prestart_visibility: Boolean!
+  products: [ProductType!]
+  published: Boolean!
+  rank: Boolean!
+  registration_limit: Int
+  start_date: CacheDate!
+  start_date_registration: CacheDate!
+  summary: ChallengeSummary!
+  temporarily_unavailable: Boolean!
+  user_challenges: [UserChallenges!]!
+  winners: [UserChallenges!]
+}
+
+type ChallengeActivity {
+  activity: Activity!
+  activity_id: String!
+  challenge_id: String
+  user_challenge_id: String!
+  user_id: String
+}
+
+type ChallengeAttachedFiles {
+  description: String
+  extension: String
+  id: ID!
+  link: String
+  name: String
+}
+
+type ChallengeAwardAdditionalRequest {
+  additional_request: AdditionalRequest!
+  award_id: String!
+  free_value: String
+  possible_request_response: PossiblelRequestResponse
+  user_challenge_id: String!
+}
+
+type ChallengeAwardDeliveryAddress {
+  address_line_one: String!
+  address_line_two: String
+  city_id: String!
+  delivery: Boolean
+  sent: Boolean
+  shipping_company: String
+  tracking_code: String
+  tracking_link: String
+  user_challenge_id: String!
+  zip_code: String
+}
+
+type ChallengeAwards {
+  active: Boolean!
+  awardAdditionalRequest: [AwardAdditionalRequests!]!
+  award_volumes: [AwardVolume!]
+  awardsImages: [ChallengeAwardsImages!]!
+  awards_remaining: Float
+  challenge_award_additional_requests: [ChallengeAwardAdditionalRequest!]!
+  challenge_id: String!
+  description: String!
+  id: ID!
+  name: String!
+  only_for_draw: Boolean
+  position: Float
+  price: Float
+  quantity: Float
+  subscribers_limit: Float
+}
+
+type ChallengeAwardsImages {
+  active: Boolean!
+  id: ID!
+  link: String!
+  order: Int!
+}
+
+type ChallengeCategories {
+  category_configuration: CategoryConfiguration
+  configuration: ChallengeConfiguration @deprecated(reason : "To get the configuration of a category now there is a new field called category_configuration")
+  description: String!
+  id: ID!
+  name: String!
+  order: Float
+}
+
+type ChallengeConfiguration {
+  accept_withdrawal: Boolean!
+  accumulation: Boolean!
+  allows_category_change: Boolean!
+  altimetry_goal_value: Float
+  automatic_draw: Boolean!
+  award_at_address: Boolean!
+  challenge_category_id: String
+  challenge_id: String!
+  classification_by_award: Boolean!
+  coverage_array: [String!]!
+  deadline_category_change: CacheDate!
+  distance_goal_value: Float
+  first_to_complete: Boolean!
+  id: ID!
+  is_draw: Boolean!
+  is_paid: Boolean!
+  is_win_prizes: Boolean!
+  max_altimetry_goal_value: Float
+  max_distance_goal_value: Float
+  max_time_goal_value: Int
+  min_time_goal_value: Int
+  pass_faster: Boolean!
+  unique_ride: Boolean!
+}
+
+type ChallengeExternalLinksAttached {
+  description: String
+  favicon_image_link: String
+  id: ID!
+  link: String
+  name: String
+}
+
+type ChallengeFreightQuote {
+  award_id: String!
+  id: ID!
+  user_id: String!
+  value: Float!
+  weight: Float!
+  zip_destination: String!
+  zip_origin: String!
+}
+
+type ChallengeImages {
+  id: ID!
+  link: String!
+  order: Float
+}
+
+type ChallengeParticipantsStatisticsResponse {
+  count_followed_by_me: Float!
+  count_gender_female: Float!
+  count_gender_male: Float!
+  count_subscribers: Float!
+  count_who_followe_me: Float!
+}
+
+type ChallengeRankSummaryResponse {
+  challenge_statistics: ChallengeStatisticsResponse!
+  participants_statistics: ChallengeParticipantsStatisticsResponse!
+  subscribed_highlights: HighlightsOfCchallengeInRankResponse!
+}
+
+type ChallengeSegments {
+  challenge_id: String!
+  sequence: Int!
+  strava_segment_id: Float!
+}
+
+type ChallengeShowCaseAvailable {
+  description: String!
+  file_key: String!
+  id: ID!
+  name: String!
+  type: String!
+}
+
+type ChallengeShowCaseResponse {
+  content: [Challenge!]!
+  key: String!
+  name: String!
+  order: Int!
+  type: String!
+}
+
+type ChallengeStatisticsResponse {
+  total_altimetry: Float
+  total_distance: Float
+  total_rides: Float
+  total_time_ride: Float
+}
+
+type ChallengeSummary {
+  _id: ID!
+  challenge_id: String!
+  count_claps: Float
+  count_comments: Float
+  count_subscribe: Float
+  count_unsubscribed: Float
+  count_view: Float
+  total_paid: Float
+  total_to_pay: Float
+  total_to_receive: Float
+}
+
+type ChallengeType {
+  challenge_type: ID!
+  created_at: DateTime!
+  description: String!
+  name: String!
+  updated_at: DateTime!
+}
+
+type City {
+  id: ID!
+  id_locale: String!
+  name: String!
+  slug: String!
+  state: State!
+  status: Boolean!
+}
+
+type Clap {
+  challenge_id: String!
+  count: Float!
+  profile: Profile!
+  profile_id: String!
+}
+
+type Comment {
+  active: Boolean!
+  challenge_id: String!
+  childComments: [Comment!]
+  claps: [CommentClap!]
+  claps_count: Float
+  created_at: CacheDate!
+  id: ID!
+  parent_challenge_comment_id: String
+  profile: Profile!
+  profile_id: String!
+  text: String!
+}
+
+type CommentClap {
+  challenge_comment_id: String!
+  count: Float!
+  profile: Profile!
+  profile_id: String!
+}
+
+type Company {
+  active: Boolean!
+  address_one: String!
+  address_two: String!
+  business_name: String!
+  challenges_award_count: Float!
+  challenges_subscription_count: Float!
+  city_id: String!
+  company_type_id: String!
+  count_challenges: Float!
+  created_at: DateTime!
+  email: String!
+  fantasy_name: String!
+  id: ID!
+  phone_number: String!
+  profile: Profile!
+  register_number: String!
+  register_number_region: Float!
+  site: String!
+  updated_at: DateTime!
+  zip_code: String!
+}
+
+type CompanyBankAccount {
+  account: String!
+  account_digit: String
+  agency: String!
+  agency_digit: String
+  associated_document: String
+  default_account: Boolean!
+  id: ID!
+  name: String!
+}
+
+type Complaint {
+  comment: String
+  complaint_type_id: String!
+  id: ID!
+  resource: String!
+  resource_id: String!
+}
+
+type ComplaintType {
+  description: String!
+  id: ID!
+  name: String!
+}
+
+type ComplaintTypeTranslation {
+  complaint_type_id: String!
+  description: String!
+  language_code: String!
+  name: String!
+}
+
+type CrawledActivityResponse {
+  message: String!
+  status: String!
+}
+
+type CreateAwardImagesResponse {
+  message: String!
+  status: String!
+}
+
+type CreatePaymentApprovedAtAntifraudResponse {
+  message: String!
+  status: String!
+}
+
+type CreateProductImageResponse {
+  message: String!
+  status: String!
+}
+
+type DataCompiled {
+  _id: ID!
+  has_company: Boolean!
+  integrated_with_apple_health: Boolean!
+  integrated_with_garmin: Boolean!
+  integrated_with_google_fit: Boolean!
+  integrated_with_polar: Boolean!
+  integrated_with_strava_crawler: Boolean!
+  last_app_version_used: String
+  last_device_used: String
+  last_platform_used: String
+  last_time_used: String
+  last_upload_apple_health: DateTime
+  last_upload_garmin: DateTime
+  last_upload_google_fit: DateTime
+  last_upload_polar: DateTime
+  user_id: String!
+  verified_phone: Boolean!
+  view_welcome_screen: Boolean
+}
+
+type DeleteAwardResponse {
+  message: String!
+  status: String!
+}
+
+type FavoriteUserChallenge {
+  challenge: Challenge!
+  challenge_id: String!
+  profile_id: String!
+}
+
+type FollowingProfile {
+  _id: ID!
+  created_at: DateTime!
+  profile_following_id: String!
+  profile_main_id: String!
+  updated_at: DateTime!
+}
+
+type GetUserActivityContentResponse {
+  address: String!
+  avatar: String!
+  date: String!
+  distance: Float!
+  elevation: Float!
+  key: String!
+  name: String!
+  person_name: String!
+  time: String!
+  type: String!
+}
+
+type HighlightsOfCchallengeInRankResponse {
+  highlight_by_greater_altimetry: UserChallenges
+  highlight_by_greater_distance: UserChallenges
+  highlight_by_greater_ride: UserChallenges
+  highlight_by_greater_total_time: UserChallenges
+}
+
+type InstallmentsResponse {
+  installments: [JSONObject!]!
+}
+
+type ListCompaniesResponse {
+  companies: [Company!]
+  title: String!
+}
+
+type LoginResponse {
+  accessToken: String!
+  profile: Profile
+  refreshToken: String!
+  user: User!
+}
+
+type Mutation {
+  Register(data: RegisterUserInput!): User!
+  TermAccepted(data: TermAcceptedInput!): TermAccepted!
+  addAwardChallenge(challenge_award: CreateChallengeAwardInput!, challenge_id: String!): ChallengeAwards!
+  addAwardImages(award_images: [CreateAwardImagesInput!]!): CreateAwardImagesResponse!
+  addChallengeExternalLinksAttached(data: CreateChallengeExternalLinksAttachedInput!): ChallengeExternalLinksAttached!
+  addChallengeFilesAttached(data: CreateChallengeAttachedFilesInput!): ChallengeAttachedFiles!
+  addfavoriteChallenge(data: FavoriteUserChallengeInput!): FavoriteUserChallenge!
+  calculateFreightQuote(data: CreateFreightQuoteInput!): ChallengeFreightQuote!
+  changeBank(data: UpdateBankInput!): Bank!
+  changeHealthConnections(data: ChangeHealthConnectionsInput!): DataCompiled!
+  changeSettingsProfileNotifications(data: UpdateSettingsProfileNotificationInput!): SettingsProfileNotifications!
+  changeSubscriptionCategory(data: ChangeSubscriptionCategoryInput!): UserChallenges!
+  changeUserPassword(data: RecoverUserPasswordInput!): User!
+  codeRecovery(data: SmsCodeInput!): VerifyPhoneNumberResponse!
+  createActivity(data: CreateActivityInput!): Activity!
+  createActivityFromCrawler(activityKey: String!): CrawledActivityResponse!
+  createAddressToDeliverAward(data: CreateAwardDeliveryAddressInput!): ChallengeAwardDeliveryAddress!
+  createAppData(data: AppDataInput!): AppData!
+  createAwardDeliveryAddress(data: CreateAwardDeliveryAddressInput!): ChallengeAwardDeliveryAddress! @deprecated(reason : "To create an address to deliver the award it will be necessary to use the user_challenge_id now")
+  createAwardVolume(data: CreateAwardVolumeInput!): AwardVolume!
+  createBank(data: CreateBankInput!): Bank!
+  createCard(data: CreateCardInput!): Card!
+  createCategory(data: CreateChallengeCategoriesInput!): ChallengeCategories!
+  createChallenge(challenge: CreateChallengeInput!, challenge_award: [CreateChallengeAwardInput!]!, challenge_categories: [CreateChallengeCategoriesInput!], challenge_configuration: CreateChallengeConfigurationInput): Challenge!
+  createChallengeImage(challenge_images: [CreateChallengeImagesInput!]!): [ChallengeImages!]!
+  createChallengeSegment(data: CreateChallengeConfigurationSegmentsInput!): ChallengeSegments!
+  createChallengeShowCase(data: CreateChallengeShowCaseInput!): ChallengeShowCaseAvailable!
+  createClap(data: CreateClapInput!): Clap!
+  createComment(data: CreateCommentInput!): Comment!
+  createCommentClap(data: CreateCommentClapInput!): CommentClap!
+  createCompany(data: CreateCompanyInput!): Company!
+  createCompanyBankAccount(data: CreateCompanyBankAccountInput!): CompanyBankAccount!
+  createComplaint(data: CreateComplaintInput!): Complaint!
+  createComplaintType(data: CreateComplaintTypeInput!): ComplaintType!
+  createComplaintTypeTranslation(data: ComplaintTypeTranslationInput!): ComplaintTypeTranslation!
+  createMonitorActivity(data: CreateMonitorActivityInput!): Activity!
+  createPaymentApprovedAtAntifraud(data: CreatePaymentApprovedAtAntifraudInput!): CreatePaymentApprovedAtAntifraudResponse!
+  createProduct(data: CreateProductInput!): ProductType!
+  createProductImage(product_images: [CreateProductImageInput!]!): CreateProductImageResponse!
+  createProductVariation(data: CreateProductVariationInput!): ProductVariationType!
+  createProductVariationPrice(data: CreateProductVariationPriceInput!): ProductVariationPriceType!
+  createSuggestion(data: CreateSuggestionInput!): Suggestion!
+  createTerm(data: RegisterTermInput!): Term!
+  createThirdPartyDataSource(data: CreateThirdPartyDataInput!): ThirdPartyProvider!
+  createWithdrawalAddresses(withdrawal_addresses: [CreateWithdrawalAddressInput!]!): [WithdrawalAddress!]!
+  deleteAward(award_id: String!): DeleteAwardResponse!
+  deleteAwardVolume(id: String!): Boolean!
+  deleteBank(id: String!): Boolean!
+  deleteCard(id: String!): Boolean!
+  deleteChallenge(id: String!): Boolean!
+  deleteChallengeImage(id: String!): Boolean!
+  deleteChallengeProgressActivity(data: DeleteUserChallengeActivityInput!): Boolean!
+  deleteComment(id: String!): Comment!
+  deleteCompanyBankAccount(id: String!): Boolean!
+  deleteComplaintType(id: String!): Boolean!
+  deleteComplaintTypeTranslation(data: DeleteComplaintTypeTranslationInput!): Boolean!
+  deleteFavoriteChallenge(data: FavoriteUserChallengeInput!): Boolean!
+  deleteProduct(id: String!): Boolean!
+  deleteProductImage(data: DeleteProductImageInput!): Boolean!
+  deleteProductVariation(id: String!): Boolean!
+  deleteProductVariationPrice(data: DeleteProductVariationPriceInput!): Boolean!
+  deleteUser(data: VerifyEmailInput!): Boolean!
+  deleteWithoutVerifyUser(data: DeleteInput!): Boolean!
+  disconnectGarmin(data: DisconnectThirdPartyProviderInput!): Boolean!
+  disconnectPolar(data: DisconnectThirdPartyProviderInput!): Boolean!
+  followProfile(data: FollowProfileInput!): FollowingProfile!
+  login(data: LoginUserInput!): LoginResponse!
+  markNotificationsAsRead(data: ListUserNotificationsInput!): [Notification!]!
+  markSubscriptionAsWithdrawn(data: MarkSubscriptionAsWithdrawnInput!): UserChallenges!
+  reactivateUser(email: String!): User!
+  reattemptSubscriptionPayment(award_data: ChallengePaymentInput!, payment_data: PaymentInput!): SuccessfulPaymentResponse!
+  registerAddress(data: RegisterAddressInput!): User!
+  registerAppleUser(data: CreateAppleUserInput!): LoginResponse!
+  registerFacebookUser(data: CreateFacebookUserInput!): LoginResponse!
+  registerGoogleUser(data: CreateGoogleUserInput!): LoginResponse!
+  registerStravaUser(data: CreateStravaUserInput!, scope: String!): User!
+  sendMail(data: SendEmailInput!): String!
+  setupSubscriptionToWithdraw(subscription_data: [SetupSubscriptionToWithdrawInput!]): SetupSubscriptionsToWithdrawResponse!
+  subscribeUserChallenge(award_data: ChallengePaymentInput, challenge_award_requests: [ChallengeAwardAdditionalRequestInput!], data: SubscribeUserChallengeInput!, payment_data: PaymentInput, products_purchased: [ProductPurchasedInput!]): UserChallenges!
+  unactivateCompany(id: String!): Company!
+  unactivateUser(id: String!): User!
+  undoClap(data: CreateClapInput!): Clap!
+  undoCommentClap(data: CreateCommentClapInput!): CommentClap!
+  unfollowProfile(data: FollowProfileInput!): Boolean!
+  unsubscribeUserChallenge(challenge_id: String!): Boolean!
+  updateAddressToDeliverAward(data: UpdateAwardDeliveryAddressInput!): ChallengeAwardDeliveryAddress!
+  updateAppData(data: AppDataInput!): AppData!
+  updateAwardDeliveryAddress(data: UpdateAwardDeliveryAddressInput!): ChallengeAwardDeliveryAddress! @deprecated(reason : "To update an address to deliver the award it will be necessary to use the user_challenge_id now")
+  updateAwardVolume(data: UpdateAwardVolumeInput!): AwardVolume!
+  updateAwards(awards: [UpdateAwardInput!]!): [ChallengeAwards!]!
+  updateCard(data: UpdateCardInput!, id: String!): Card!
+  updateChallenge(data: UpdateChallengeInput!, id: String!): Challenge!
+  updateChallengeConfiguration(data: UpdateChallengeConfigurationInput!): ChallengeConfiguration!
+  updateChallengeImage(data: UpdateChallengeImagesInput!): ChallengeImages!
+  updateComment(id: String!, text: String!): Comment!
+  updateCompanyBankAccount(data: UpdateCompanyBankAccountInput!): CompanyBankAccount!
+  updateComplaintType(data: UpdateComplaintTypeInput!): ComplaintType!
+  updateComplaintTypeTranslation(data: ComplaintTypeTranslationInput!): ComplaintTypeTranslation!
+  updateProduct(data: UpdateProductInput!): ProductType!
+  updateProductImageOrder(data: UpdateProductImageOrderInput!): ProductImageType!
+  updateProductVariation(data: UpdateProductVariationInput!): ProductVariationType!
+  updateProductVariationPrice(data: UpdateProductVariationPriceInput!): ProductVariationPriceType!
+  updateProfileCompany(data: UpdateProfileCompanyInput!): Profile!
+  updateProfilePersonal(data: UpdateProfilePersonalInput!): Profile!
+  updateUser(data: UpdateUserInput!, id: String!): User!
+  updateUserDataCompiled(data: UpdateUserDataCompiledInput!): DataCompiled!
+  updateUserSettings(data: UserSettingsInput!): Settings!
+  updateWithdrawalAddress(data: UpdateSubscriptionWithdrawalAddressInput!): UserChallenges!
+  verifyEmailCode(data: VerifyEmailInput!): VerifyEmailResponse!
+  verifyPhoneNumber(data: PhoneInput!): VerifyPhoneNumberResponse!
+}
+
+type Notification {
+  _id: ID!
+  created_at: CacheDate!
+  deep_linking: String
+  media_url: String
+  notification_content: String!
+  push_content: String
+  push_subtitle: String
+  push_title: String
+  read: Boolean!
+  recipient_id: String!
+  sender_profile_avatar: String
+  sender_username: String
+  universal_link: String!
+}
+
+type NotificationScalar {
+  date: DateTime!
+  notifications: [Notification!]!
+  unread_notifications_count: Float!
+}
+
+type Origin {
+  description: String!
+  id: ID!
+  name: String!
+  translation: OriginTranslation!
+}
+
+type OriginTranslation {
+  description: String!
+  language_code: String!
+  name: String!
+  origin_payment_id: String!
+}
+
+type Payment {
+  acquirer_name: String
+  acquirer_return_code: String!
+  antifraud_metadata: String
+  antifraud_order_id: String
+  antifraud_score: String
+  authorization_code: String
+  authorized_amount: Float
+  bill_barcode: String
+  bill_expiration_date: CacheDate
+  bill_link: String
+  card: Card
+  cost: String
+  country_id: String!
+  created_at: CacheDate!
+  declined: Boolean!
+  entrance: Boolean!
+  humanized_message: String
+  id: String!
+  installments: Float
+  is_paid: Boolean!
+  nsu: String!
+  origin_payment: Origin!
+  origin_payment_id: String!
+  origin_resource_id: String!
+  paid_amount: Float
+  payment_processor_id: String!
+  processed: Boolean!
+  profile_id: String!
+  refunded_amount: Float
+  refuse_reason: String
+  resource_payment_id: String!
+  returned: Boolean!
+  split_rules: String
+  status: String!
+  tid: String!
+  updated_at: CacheDate!
+  user: User!
+  user_card_id: String
+  user_id: String!
+  value: Float!
+}
+
+type PossiblelRequestResponse {
+  additional_request_id: String!
+  id: ID!
+  image_reference: String
+  order: Float!
+  price: Float
+  response: String!
+}
+
+type ProductImageType {
+  active: Boolean!
+  created_at: CacheDate!
+  id: ID!
+  link: String!
+  order: Float!
+  product_variation_id: String!
+  updated_at: CacheDate!
+}
+
+type ProductPurchasedType {
+  canceled: Boolean!
+  created_at: CacheDate!
+  free_value: String
+  id: ID!
+  product: ProductType!
+  product_id: String!
+  product_variation_id: String
+  updated_at: CacheDate!
+  user_challenge_id: String
+  user_id: String!
+  value: Float
+  variation: ProductVariationType!
+}
+
+type ProductType {
+  active: Boolean!
+  allow_buy_without_subscription: Boolean!
+  available: Boolean!
+  challenge_id: String
+  created_at: CacheDate!
+  date_end: CacheDate
+  date_initial: CacheDate
+  description: String
+  free_field: Boolean!
+  has_cost: Boolean!
+  id: ID!
+  name: String!
+  order: Float!
+  updated_at: CacheDate!
+  variations: [ProductVariationType!]
+}
+
+type ProductVariationPriceType {
+  active: Boolean!
+  created_at: CacheDate!
+  date_initial: CacheDate!
+  id: ID!
+  product_variation_id: String!
+  updated_at: CacheDate!
+  value: Float!
+}
+
+type ProductVariationType {
+  active: Boolean!
+  available: Boolean!
+  available_quantity: Float
+  created_at: CacheDate!
+  description: String
+  id: ID!
+  images: [ProductImageType!]
+  initial_quantity: Float
+  order: Float!
+  prices: [ProductVariationPriceType!]
+  product_id: String!
+  text: String!
+  updated_at: CacheDate!
+}
+
+type Profile {
+  company_id: String!
+  description: String
+  followers_count: Float!
+  following_count: Float!
+  id: ID!
+  is_follower: Boolean
+  official: Boolean!
+  profile_avatar: String
+  profile_cover: String
+  user: User!
+  user_id: String!
+  username: String!
+}
+
+type ProfileSchedule {
+  _id: ID!
+  date_occurrence: DateTime
+  deep_link: String!
+  image_link: String!
+  profile_id: String!
+  resource_key: String!
+  subtitle: String!
+  title: String!
+  web_link: String!
+}
+
+type Query {
+  allChallengeAttachedFiles(challenge_id: String!, pagination: PaginationInput!): [ChallengeAttachedFiles!]!
+  allChallengeExternalLinksAttached(challenge_id: String!, pagination: PaginationInput!): [ChallengeExternalLinksAttached!]!
+  bestCompaniesResult(pagination: PaginationInput!, term_of_search: String!): ListCompaniesResponse!
+  bestResultsChallenges(pagination: PaginationInput!, term_of_search: String!): BestResultsChallengesResponse!
+  bestResultsChallengesByCoverage(pagination: PaginationInput!, place_to_search: String!): BestResultsChallengesResponse!
+  bestResultsChallengesByType(data: ChallengesBestResultsByTypeInput!, pagination: PaginationInput!): BestResultsChallengesResponse!
+  bestResultsOfAwards(pagination: PaginationInput!, term_of_search: String!): BestResultsAwardsResponse!
+  bestResultsOfChallengesByCompany(pagination: PaginationInput!, term_of_search: String!): BestResultsChallengesResponse!
+  bestResultsOfEndedChallenges(pagination: PaginationInput!, term_of_search: String!): BestResultsChallengesResponse!
+  calculateInstallments(data: InstallmentsInput!): InstallmentsResponse!
+  challengeTypes: [ChallengeType!]!
+  checkEmail(email: String!): User!
+  checkProfileIsFollower(data: FollowProfileInput!): Boolean!
+  checkUsername(username: String!): Boolean!
+  exploreChallenges(page: Float!, profile_id: String!): [ChallengeShowCaseResponse!]!
+  findPayment(id: String!): Payment!
+  getActiveUserChallenges(pagination: PaginationInput!, profile_id: String!, user_id: String): [Challenge!]!
+  getActivityDetail(id: String!): Activity!
+  getAddressToDeliverAward(data: GetAddressToDeliverAwardInput!): ChallengeAwardDeliveryAddress!
+  getAppData(platform: String!): AppData!
+  getAward(award_id: String!): ChallengeAwards!
+  getAwardAcquired(data: GetAwardSubscriptionInput!): AwardSubscription!
+  getAwardDeliveryAddress(challenge_id: String!): ChallengeAwardDeliveryAddress! @deprecated(reason : "To search for address pointed for award delivery now we are going to use the user_challenge_id instead of the user_id and challenge_id")
+  getAwardSubscriptionPayment(data: GetAwardSubscriptionInput!): AwardSubscription! @deprecated(reason : "To get the award bought by an user now it is going to be used the user_challenge_id instead of the user_id and challenge_id")
+  getAwardVolumes(award_id: String!): [AwardVolume!]
+  getBanks(pagination: PaginationInput!): [Bank!]!
+  getCard(id: String!): Card!
+  getCards(pagination: PaginationInput!, user_id: String!): [Card!]!
+  getChallegeAwardAdditionalRequest(data: GetChallengeAwardAdditionalRequestInput!): ChallengeAwardAdditionalRequest! @deprecated(reason : "To retrieve the additional requests of a subscription now it will be necessary to use the user_challenge_id instead of the challenge_id")
+  getChallenge(id: String!): Challenge!
+  getChallengeAwards(data: GetChallengeAwardsInput!): [ChallengeAwards!]!
+  getChallengeComments(challenge_id: String!, pagination: PaginationInput!): [Comment!]!
+  getChallengeDetail(data: GetChallengeDetailInput!): Challenge!
+  getChallengeImages(challenge_id: String!): [ChallengeImages!]!
+  getChallengeRankInformation(challenge_id: String!): ChallengeRankSummaryResponse!
+  getChallengeRanks(data: GetRanksInput!, pagination: PaginationInput!): [UserChallenges!]!
+  getChallengeSubscriptions(challenge_id: String!): [UserChallenges!]!
+  getChallengeWithConfiguration(challenge_id: String!): Challenge!
+  getChallengeWithdrawalAddresses(data: FindWithdrawalAddressesInput!): [WithdrawalAddress!]!
+  getChallengesByCompany(company_id: String!): [Challenge!]!
+  getChallengesByType(data: GetChallengesByTypeInput!, pagination: PaginationInput!): [Challenge!]!
+  getChallengesManagedByUser(pagination: PaginationInput!): [Challenge!]!
+  getChallengesPreLaunched(pagination: PaginationInput!, profile_id: String!): [Challenge!]!
+  getChallengesUserCreated(data: ListChallengesUserCreatedInput!, pagination: PaginationInput!): [Challenge!]!
+  getCitiesByName(name: String!, pagination: PaginationInput!): [City!]!
+  getCity(data: CitiesInput!, pagination: PaginationInput!): [City!]!
+  getCityByCountry(country_id: String!, pagination: PaginationInput!): [City!]!
+  getCompanyBankAccounts(company_id: String!, pagination: PaginationInput!): [CompanyBankAccount!]!
+  getCompanyById(id: String!): Company!
+  getComplaintTypeTranslation(complaint_type_id: String!): ComplaintTypeTranslation!
+  getFavoriteChallenges(pagination: PaginationInput!, profile_id: String!): [Challenge!]!
+  getFinishedUserChallenges(pagination: PaginationInput!, profile_id: String!): [Challenge!]!
+  getMostAccessedChallenges(pagination: PaginationInput!): [Challenge!]!
+  getPaymentsOfASubscription(data: RetrieveSubscriptionPaymentsInput!): [SubscriptionPayment!]!
+  getProductVariationImages(product_variation_id: String!): [ProductImageType!]!
+  getProductVariationPrices(product_variation_id: String!): [ProductVariationPriceType!]!
+  getProductVariations(product_id: String!): [ProductVariationType!]!
+  getProductsByChallengeId(challenge_id: String!): [ProductType!]!
+  getProfile(data: GetProfileDetailInput!): Profile!
+  getRecentlyChallenges(pagination: PaginationInput!): [Challenge!]!
+  getSchedule(pagination: PaginationInput!, profile_id: String!): [ProfileSchedule!]!
+  getSegmentById(id: Float!): Segment!
+  getSegmentsByLocation(data: FindSegmentsByLocationInput!): [Segment!]!
+  getSegmentsByName(data: GetSegmentByNameInput!): [Segment!]!
+  getSettingsProfileNotifications(profile_id: String!): SettingsProfileNotifications!
+  getStates(pagination: PaginationInput!): [State!]!
+  getStatesByCountry(country_id: String!, pagination: PaginationInput!): [State!]!
+  getStatesByName(name: String!, pagination: PaginationInput!): [State!]!
+  getSubscriptionActivities(data: RetrieveSubscriptionActivitiesInput!): [ChallengeActivity!]!
+  getSubscriptionAwardAdditionalRequest(data: GetChallengeAwardAdditionalRequestInput!): ChallengeAwardAdditionalRequest!
+  getSubscriptionPayments(challenge_id: String!): [SubscriptionPayment!]! @deprecated(reason : "In order to retrieve the payments from a challenge now it is going to be used the user_challenge_id")
+  getSubscriptionProgress(data: GetUserChallengeProgressInput!): UserChallenges!
+  getUserActivities: [Activity!]!
+  getUserChallengeActivities(challenge_id: String!): [ChallengeActivity!]! @deprecated(reason : "To search for the activities of a given subscription we are going to use the user_challenge_id instead of the challenge_id and user_id.")
+  getUserChallengeProgress(data: GetUserChallengeProgressInput!): UserChallenges! @deprecated(reason : "In order to get the subscription progress now it has to be passed the user_challenge_id instead of the challenge_id")
+  getUserDataCompiled: ThirdPartyDataCompiled!
+  getUserDataFromCrawledActivity(url: String!): GetUserActivityContentResponse!
+  getUserNotifications(data: ListUserNotificationsInput!, pagination: PaginationInput!): NotificationScalar!
+  getUserSettings: Settings!
+  listAllThirdPartyDataActived: [ThirdPartyDataSource!]!
+  listChallengeAwardWinners(challenge_id: String!): [UserChallenges!]!
+  listChallengeCategories(challenge_id: String!): [ChallengeCategories!]!
+  listChallengesBySubscriptionCount: [Challenge!]!
+  listComplaintsTypesTranslation: [ComplaintTypeTranslation!]!
+  payments(pagination: PaginationInput!, profile_id: String!): [Payment!]!
+  showAllChallenges(data: ShowAllChallengesInput!, pagination: PaginationInput!): [Challenge!]!
+  userCompanies: [Company!]!
+  userProfileFindEmail(email: String!): User!
+  userProfileFindPhone(phone: String!): User!
+  validatePublication(challenge_id: String!): [String!]!
+}
+
+type Segment {
+  activity_type: String!
+  athlete_count: Float!
+  average_grade: Float!
+  city: String!
+  climb_category: Float!
+  country: String!
+  created_at: DateTime!
+  created_at_strava: DateTime!
+  distance: Float!
+  effort_count: Float!
+  elev_difference: Float!
+  elevation_high: Float!
+  elevation_low: Float!
+  end_latitude: Float!
+  end_longitude: Float!
+  hazardous: Boolean!
+  maximum_grade: Float!
+  name: String!
+  polyline: String!
+  private_segment: Boolean!
+  segments_strava_id: ID!
+  star_count: Float!
+  start_latitude: Float!
+  start_longitude: Float!
+  state: String!
+  total_elevation_gain: Float!
+  updated_at: DateTime!
+  updated_at_strava: DateTime!
+}
+
+type Settings {
+  color_theme_device: Boolean!
+  dark_theme: Boolean!
+  measuring_unit: String!
+  user_id: ID!
+}
+
+type SettingsProfileNotifications {
+  _id: ID!
+  activities_received_email: Boolean!
+  activities_received_push: Boolean!
+  challenge_reminder_email: Boolean!
+  challenge_reminder_push: Boolean!
+  challenge_subscribed_received_email: Boolean!
+  challenge_subscribed_received_push: Boolean!
+  claps_email: Boolean!
+  claps_push: Boolean!
+  comment_claps_email: Boolean!
+  comment_claps_push: Boolean!
+  comment_response_email: Boolean!
+  comment_response_push: Boolean!
+  comments_email: Boolean!
+  comments_push: Boolean!
+  follower_new_email: Boolean!
+  follower_new_push: Boolean!
+  followers_request_email: Boolean!
+  followers_request_push: Boolean!
+  maintenance_reminder_email: Boolean!
+  maintenance_reminder_push: Boolean!
+  mentions_email: Boolean!
+  mentions_push: Boolean!
+  message_request_email: Boolean!
+  message_request_push: Boolean!
+  messages_received_email: Boolean!
+  messages_received_push: Boolean!
+  profile_id: String!
+}
+
+type SetupSubscriptionsToWithdrawResponse {
+  message: String!
+  status: String!
+}
+
+type State {
+  abbreviation: String!
+  active: Boolean!
+  country_id: String!
+  id: ID!
+  id_locale: String!
+  name: String!
+  slug: String!
+}
+
+type SubscriptionPayment {
+  award: ChallengeAwards!
+  award_id: String!
+  challenge_id: String
+  id: String!
+  payment: Payment!
+  payment_id: String!
+  subscription: UserChallenges!
+  user_challenge_id: String!
+  user_id: String
+}
+
+type SubscriptionStatus {
+  id: ID!
+  status_description: SubscriptionStatusDescription!
+  subscription_status_id: String!
+  user_challenge_id: String!
+}
+
+type SubscriptionStatusDescription {
+  code: String!
+  description: String!
+  id: ID!
+  name: String!
+  translations: [SubscriptionStatusTranslation!]!
+}
+
+type SubscriptionStatusTranslation {
+  description: String!
+  language_code: String!
+  name: String!
+}
+
+type SuccessfulPaymentResponse {
+  message: String!
+  payment_id: String!
+  title: String!
+}
+
+type Suggestion {
+  id: ID!
+  score: Float!
+  text: String!
+  user_id: String!
+}
+
+type Term {
+  active: Boolean!
+  companies: Boolean!
+  default: Boolean!
+  description: String!
+  id: ID!
+  language_code: Boolean!
+  link: String!
+  name: String!
+}
+
+type TermAccepted {
+  id: ID!
+  term_id: String!
+  user_id: String!
+}
+
+type ThirdPartyDataCompiled {
+  data_compiled: DataCompiled!
+  third_party_data: [ThirdPartyDataSource!]
+}
+
+type ThirdPartyDataSource {
+  access_token: String
+  created_at: DateTime!
+  expires: Float
+  id_data_source: String
+  third_party_data_source: ThirdPartyProvider!
+  token_secret: String
+  token_type: String
+  updated_at: DateTime!
+  user: User!
+  user_id: ID!
+}
+
+type ThirdPartyProvider {
+  active: Boolean!
+  created_at: DateTime!
+  description: String!
+  id: ID!
+  is_gps: Boolean!
+  name: String!
+  slug: String!
+  updated_at: DateTime!
+  user_third_party_data_source: [ThirdPartyDataSource!]!
+}
+
+type User {
+  active: Boolean!
+  activities_count: Float
+  address_line_one: String
+  address_line_two: String
+  blacklist: Boolean!
+  city: City
+  city_id: String
+  count_challenges_participates: Float
+  created_at: DateTime!
+  date_of_birth: CacheDate
+  email: String
+  firstname: String
+  gender: String
+  has_social_login: Boolean!
+  id: ID!
+  last_challenge: Challenge
+  lastname: String
+  legal_registry_number: String
+  name: String
+  payments: [Payment!]!
+  phone: String
+  profile: Profile
+  staff: Boolean!
+  stature: Float
+  strava_permission_activities: Boolean!
+  street_number: String
+  team_name: String
+  updated_at: DateTime!
+  weight: Float
+  zip_code: String
+}
+
+type UserChallenges {
+  activities: [ChallengeActivity!]
+  amount_freight: Float
+  amount_paid: Float
+  amount_to_pay: Float
+  award: ChallengeAwards
+  category: ChallengeCategories
+  challenge: Challenge!
+  challenge_category_id: String
+  challenge_id: String!
+  challenge_withdrawal_address_id: String
+  classification: Float
+  completed: Boolean!
+  created_at: CacheDate!
+  drawn: Boolean!
+  end_date: CacheDate
+  id: ID!
+  last_payment: Payment!
+  last_payment_id: String
+  paid: Boolean
+  payment_id: String
+  products_bought: [ProductPurchasedType!]!
+  ready_to_withdraw: Boolean
+  registration_date: CacheDate
+  short_id: String
+  start_time_first_activity: CacheDate
+  subscription_status: SubscriptionStatus
+  total_altimetry: Float
+  total_distance: Float
+  total_friends: Float
+  total_rides: Float
+  total_time: Float
+  updated_at: CacheDate!
+  user: User!
+  user_id: String!
+  user_marked_withdrawn: Boolean
+  withdrawal_address: WithdrawalAddress
+  withdrawal_date: CacheDate
+}
+
+type VerifyEmailResponse {
+  email: String
+  user: User
+}
+
+type VerifyPhoneNumberResponse {
+  codeStatus: String
+  user: User
+}
+
+type WithdrawalAddress {
+  address_line_one: String!
+  address_line_two: String
+  challenge_id: String!
+  city: City!
+  city_id: String!
+  id: ID!
+  name: String!
+  reference_point: String
+  zip_code: String!
+}
+
+input AdditionalRequestInput {
+  expiration_date: DateTime
+  free_field: Boolean = false
+  has_cost: Boolean = false
+  image_reference: String
+  order: Float
+  possible_request_response: [CreatePossibleRequestResponseInput!]!
+  price_request: Float
+  request: String!
+}
+
+input AppDataInput {
+  latest_version_code_push: String!
+  latest_version_store: String!
+  platform: String!
+}
+
+input ChallengeAwardAdditionalRequestInput {
+  additional_request_id: String!
+  award_id: String!
+  free_value: String
+  possible_request_response_id: String
+}
+
+input ChallengePaymentInput {
+  chosen_award_id: String
+}
+
+input ChallengesBestResultsByTypeInput {
+  term_of_search: String!
+  type: String!
+}
+
+input ChangeHealthConnectionsInput {
+  integrated_with_apple_health: Boolean
+  integrated_with_google_fit: Boolean
+}
+
+input ChangeSubscriptionCategoryInput {
+  challenge_category_id: String!
+  user_challenge_id: String!
+}
+
+input CitiesInput {
+  state_id: String!
+}
+
+input ComplaintTypeTranslationInput {
+  complaint_type_id: String!
+  description: String!
+  language_code: String!
+  name: String!
+}
+
+input CreateActivityInput {
+  calories: Float
+  device_name: String
+  distance: Float
+  end_date: String
+  provider: String
+  provider_id: String
+  start_date: String
+  type: String
+}
+
+input CreateAppleUserInput {
+  apple_id: String!
+  email: String
+  firstname: String
+  lastname: String
+}
+
+input CreateAwardDeliveryAddressInput {
+  address_line_one: String!
+  address_line_two: String
+  challenge_id: String
+  city_id: String!
+  delivery: Boolean
+  shipping_company: String
+  tracking_code: String
+  tracking_link: String
+  user_challenge_id: String
+  zip_code: String
+}
+
+input CreateAwardImagesInput {
+  active: Boolean!
+  award_id: String!
+  link: String!
+  order: Float!
+}
+
+input CreateAwardVolumeInput {
+  award_id: String!
+  depth: Float!
+  description: String
+  height: Float!
+  name: String!
+  weight: Float!
+  width: Float!
+}
+
+input CreateBankInput {
+  compe_brazil: Float!
+  country_id: String
+  ispb_brazil: Float!
+  name_long: String!
+  name_short: String!
+  swift_code: String!
+}
+
+input CreateCardInput {
+  card_cvv: String!
+  card_expiration_date: String!
+  card_holder_name: String!
+  card_number: String!
+  legal_holder_number: String!
+  name: String!
+}
+
+input CreateCategoryConfigurationInput {
+  altimetry_goal_value: Float
+  distance_goal_value: Float
+  max_altimetry_goal_value: Float
+  max_distance_goal_value: Float
+  maximum_time_goal_value: Int
+  minimum_time_goal_value: Int
+}
+
+input CreateChallengeAttachedFilesInput {
+  challenge_id: String!
+  description: String!
+  link: String!
+  name: String!
+}
+
+input CreateChallengeAwardImageInput {
+  active: Boolean!
+  link: String!
+  order: Int!
+}
+
+input CreateChallengeAwardInput {
+  additional_request: [AdditionalRequestInput!]
+  award_description: String
+  award_images: [CreateChallengeAwardImageInput!]
+  award_name: String
+  only_for_draw: Boolean
+  position: Float
+  price: Float
+  quantity: Float
+  subscribers_limit: Float
+}
+
+input CreateChallengeCategoriesInput {
+  challenge_id: String
+  configuration: CreateCategoryConfigurationInput!
+  description: String!
+  name: String!
+  order: Float
+}
+
+input CreateChallengeConfigurationInput {
+  accept_withdrawal: Boolean
+  accumulation: Boolean!
+  allows_category_change: Boolean
+  altimetry_goal_value: Float
+  automatic_draw: Boolean!
+  award_at_address: Boolean!
+  classification_by_award: Boolean
+  coverage_array: [String!]!
+  deadline_category_change: DateTime
+  distance_goal_value: Float
+  first_to_complete: Boolean!
+  is_draw: Boolean!
+  is_paid: Boolean!
+  is_win_prizes: Boolean!
+  max_altimetry_goal_value: Float
+  max_distance_goal_value: Float
+  max_time_goal_value: Int
+  min_time_goal_value: Int
+  pass_faster: Boolean!
+  unique_ride: Boolean!
+}
+
+input CreateChallengeConfigurationSegmentsInput {
+  challenge_id: String!
+  sequence: Int!
+  strava_segment_id: Float!
+}
+
+input CreateChallengeExternalLinksAttachedInput {
+  challenge_id: String!
+  description: String
+  link: String!
+  name: String!
+}
+
+input CreateChallengeImagesInput {
+  challenge_id: String!
+  link: String!
+  order: Int!
+}
+
+input CreateChallengeInput {
+  accept_installments: Boolean
+  challenge_type: String!
+  company_id: String!
+  creator_id: String!
+  date_for_drawn: DateTime
+  description: String!
+  eligible_spotlight: Boolean = false
+  end_date: DateTime!
+  end_date_registration: DateTime
+  has_achievement: Boolean!
+  has_categories: Boolean!
+  image_avatar: String
+  image_cover: String
+  image_spotlight: String
+  internal_test: Boolean
+  launch_date: DateTime
+  name: String!
+  prestart_visibility: Boolean!
+  rank: Boolean!
+  registration_limit: Float
+  start_date: DateTime!
+  start_date_registration: DateTime
+}
+
+input CreateChallengeShowCaseInput {
+  description: String
+  file_key: String!
+  name: String!
+  order: Float!
+  type: String!
+}
+
+input CreateClapInput {
+  challenge_id: String!
+  count: Float!
+  profile_id: String!
+}
+
+input CreateCommentClapInput {
+  challenge_comment_id: String!
+  count: Float!
+  profile_id: String!
+}
+
+input CreateCommentInput {
+  challenge_id: String!
+  parent_challenge_comment_id: String
+  profile_id: String!
+  text: String!
+}
+
+input CreateCompanyBankAccountInput {
+  account: String!
+  account_digit: String
+  agency: String!
+  agency_digit: String
+  associated_document: String
+  bank_id: String!
+  company_id: String!
+  default_account: Boolean = true
+  name: String!
+}
+
+input CreateCompanyInput {
+  address_one: String
+  address_two: String
+  business_name: String!
+  city_id: String
+  company_type_id: String
+  email: String!
+  fantasy_name: String
+  phone_number: String!
+  register_number: String
+  register_number_region: Float
+  site: String
+  zip_code: String
+}
+
+input CreateComplaintInput {
+  comment: String
+  complaint_type_id: String!
+  resource: String!
+  resource_id: String!
+}
+
+input CreateComplaintTypeInput {
+  description: String!
+  name: String!
+}
+
+input CreateFacebookUserInput {
+  email: String!
+  facebook_id: Float!
+  firstname: String!
+  lastname: String!
+  profile_avatar: String
+}
+
+input CreateFreightQuoteInput {
+  award_id: String!
+  user_id: String!
+  zip_destination: String!
+  zip_origin: String!
+}
+
+input CreateGoogleUserInput {
+  email: String!
+  firstname: String!
+  google_id: String!
+  lastname: String!
+  profile_avatar: String
+}
+
+input CreateMonitorActivityInput {
+  description: String
+  device_name: String!
+  distance: Float!
+  elapsed_time: Float!
+  gps_points: [GpsPointsInput!]!
+  is_private: Boolean
+  moving_time: Float!
+  name: String
+  start_date: DateTime!
+  total_ascent: Float
+  total_descent: Float
+  total_elevation_gain: Float
+  visibility: String
+}
+
+input CreatePaymentApprovedAtAntifraudInput {
+  challenge_id: String!
+  transaction_id_of_current_payment: String!
+  user_id: String!
+}
+
+input CreatePossibleRequestResponseInput {
+  image_reference: String
+  order: Float
+  price: Float
+  response: String!
+}
+
+input CreateProductImageInput {
+  challenge_id: String!
+  link: String!
+  order: Float!
+  product_variation_id: String!
+}
+
+input CreateProductInput {
+  allow_buy_without_subscription: Boolean!
+  available: Boolean!
+  challenge_id: String
+  date_end: DateTime
+  date_initial: DateTime
+  description: String
+  free_field: Boolean!
+  has_cost: Boolean!
+  name: String!
+  order: Float!
+}
+
+input CreateProductVariationInput {
+  available: Boolean!
+  available_quantity: Float
+  description: String
+  initial_quantity: Float
+  order: Float!
+  product_id: String!
+  text: String!
+}
+
+input CreateProductVariationPriceInput {
+  challenge_id: String!
+  date_initial: DateTime!
+  product_variation_id: String!
+  value: Float!
+}
+
+input CreateStravaUserInput {
+  access_token: String!
+  expires: Float!
+  firstname: String!
+  gender: String!
+  lastname: String!
+  paid_strava: Boolean!
+  profile_avatar: String!
+  strava_city: String!
+  strava_country: String!
+  strava_id: Float!
+  strava_state: String!
+  token_type: String!
+  username: String
+}
+
+input CreateSuggestionInput {
+  score: Float!
+  text: String!
+}
+
+input CreateThirdPartyDataInput {
+  active: Boolean!
+  description: String!
+  is_gps: Boolean!
+  name: String!
+  slug: String!
+}
+
+input CreateWithdrawalAddressInput {
+  address_line_one: String!
+  address_line_two: String!
+  challenge_id: String!
+  city_id: String!
+  name: String!
+  reference_point: String!
+  zip_code: String!
+}
+
+input DeleteComplaintTypeTranslationInput {
+  complaint_type_id: String!
+  language_code: String!
+}
+
+input DeleteInput {
+  id: String!
+}
+
+input DeleteProductImageInput {
+  challenge_id: String!
+  id: String!
+}
+
+input DeleteProductVariationPriceInput {
+  challenge_id: String!
+  id: String!
+}
+
+input DeleteUserChallengeActivityInput {
+  activity_id: String!
+  challenge_id: String!
+}
+
+input DisconnectThirdPartyProviderInput {
+  id_data_source: String!
+}
+
+input FavoriteUserChallengeInput {
+  challenge_id: String!
+  profile_id: String!
+}
+
+input FindSegmentsByLocationInput {
+  latitude: Float!
+  longitude: Float!
+  range: Float!
+}
+
+input FindWithdrawalAddressesInput {
+  challenge_id: String!
+}
+
+input FollowProfileInput {
+  profile_following_id: String!
+  profile_main_id: String!
+}
+
+input GetAddressToDeliverAwardInput {
+  user_challenge_id: String!
+}
+
+input GetAwardSubscriptionInput {
+  challenge_id: String
+  user_challenge_id: String
+  user_id: String
+}
+
+input GetChallengeAwardAdditionalRequestInput {
+  award_id: String!
+  challenge_id: String
+  user_challenge_id: String
+}
+
+input GetChallengeAwardsInput {
+  challenge_id: String!
+}
+
+input GetChallengeDetailInput {
+  id: String!
+  profile_id: String!
+}
+
+input GetChallengesByTypeInput {
+  profile_id: String!
+  type: String!
+}
+
+input GetProfileDetailInput {
+  profile_id_accessed: String!
+  profile_id_requesting: String!
+}
+
+input GetRanksInput {
+  challenge_id: String!
+  key: String!
+}
+
+input GetSegmentByNameInput {
+  name: String!
+  offset: Float!
+  page: Float!
+}
+
+input GetUserChallengeProgressInput {
+  challenge_id: String!
+  user_challenge_id: String
+  user_id: String!
+}
+
+input GpsPointsInput {
+  coordinates: [Float!]!
+  elevation: Float!
+  speed: Float!
+}
+
+input InstallmentsInput {
+  amount: Float!
+}
+
+input ListChallengesUserCreatedInput {
+  creator_id: String!
+  profile_id: String!
+}
+
+input ListUserNotificationsInput {
+  profile_id: String!
+  timestamp: Float!
+}
+
+input LoginUserInput {
+  email: String!
+  password: String!
+}
+
+input MarkSubscriptionAsWithdrawnInput {
+  challenge_id: String!
+  subscription_user_id: String!
+  user_id_who_marked_the_withdraw: String!
+}
+
+input PaginationInput {
+  offset: Float!
+  page: Float!
+}
+
+input PaymentInput {
+  cancel_waiting_payments: Boolean
+  external_card_id: String
+  installments: String
+  payment_method: String
+  resource_paid_id: String
+  value_paid: Float
+}
+
+input PhoneInput {
+  isRegister: Boolean
+  phone: String!
+}
+
+input ProductPurchasedInput {
+  free_value: String
+  product_id: String!
+  product_variation_id: String!
+}
+
+input RecoverUserPasswordInput {
+  email: String!
+  password: String!
+}
+
+input RegisterAddressInput {
+  address_line_one: String
+  address_line_two: String
+  city_id: String
+  street_number: String
+  zip_code: String
+}
+
+input RegisterTermInput {
+  description: String!
+  language_code: String!
+  link: String!
+  name: String!
+}
+
+input RegisterUserInput {
+  city_id: String
+  email: String!
+  firstname: String!
+  gender: String
+  lastname: String!
+  password: String!
+  phone: String!
+  stature: Float
+  weight: Float
+}
+
+input RetrieveSubscriptionActivitiesInput {
+  user_challenge_id: String!
+}
+
+input RetrieveSubscriptionPaymentsInput {
+  user_challenge_id: String!
+}
+
+input SendEmailInput {
+  email: String!
+  isRegister: Boolean
+}
+
+input SetupSubscriptionToWithdrawInput {
+  challenge_id: String!
+  user_id: String!
+}
+
+input ShowAllChallengesInput {
+  key: String!
+  profile_id: String!
+}
+
+input SmsCodeInput {
+  code: String!
+  isRegister: Boolean
+  phone: String!
+}
+
+input SubscribeUserChallengeInput {
+  additional_request: [ChallengeAwardAdditionalRequestInput!]
+  amount_freight: Float
+  challenge_category_id: String
+  challenge_id: String
+  challenge_withdrawal_address_id: String
+  profile_id: String
+  registration_date: DateTime
+}
+
+input TermAcceptedInput {
+  language_code: String!
+}
+
+input UpdateAwardDeliveryAddressInput {
+  address_line_one: String!
+  address_line_two: String
+  challenge_id: String
+  city_id: String
+  delivery: Boolean
+  shipping_company: String
+  tracking_code: String
+  tracking_link: String
+  user_challenge_id: String
+  zip_code: String
+}
+
+input UpdateAwardInput {
+  description: String
+  id: String!
+  name: String
+  only_for_draw: Boolean
+  position: String
+  price: Float
+  quantity: Float
+  subscribers_limit: Float
+}
+
+input UpdateAwardVolumeInput {
+  depth: Float
+  description: String
+  height: Float
+  id: String!
+  name: String
+  weight: Float
+  width: Float
+}
+
+input UpdateBankInput {
+  compe_brazil: Float
+  country_id: String
+  id: String!
+  ispb_brazil: Float
+  name_long: String
+  name_short: String
+  swift_code: String
+}
+
+input UpdateCardInput {
+  main: Boolean
+  name: String
+}
+
+input UpdateChallengeConfigurationInput {
+  accept_withdrawal: Boolean
+  accumulation: Boolean
+  allows_category_change: Boolean
+  altimetry_goal_value: Float
+  automatic_draw: Boolean
+  award_at_address: Boolean
+  coverage_array: [String!]
+  deadline_category_change: DateTime
+  distance_goal_value: Float
+  first_to_complete: Boolean
+  id: String!
+  is_draw: Boolean
+  is_paid: Boolean
+  is_win_prizes: Boolean
+  max_time_goal_value: Float
+  min_time_goal_value: Float
+  pass_faster: Boolean
+  unique_ride: Boolean
+}
+
+input UpdateChallengeImagesInput {
+  id: String!
+  order: Int
+}
+
+input UpdateChallengeInput {
+  accept_installments: Boolean
+  canceled: Boolean
+  challenge_type: String
+  date_for_drawn: DateTime
+  date_of_drawn: DateTime
+  description: String
+  eligible_spotlight: Boolean
+  end_date: DateTime
+  end_date_registration: DateTime
+  has_achievement: Boolean
+  has_categories: Boolean
+  image_avatar: String
+  image_cover: String
+  image_spotlight: String
+  internal_test: Boolean
+  launch_date: DateTime
+  name: String
+  published: Boolean
+  reason_for_cancellation: String
+  registration_limit: Float
+  start_date: DateTime
+  start_date_registration: DateTime
+  temporarily_unavailable: Boolean
+}
+
+input UpdateCompanyBankAccountInput {
+  account: String!
+  account_digit: String
+  agency: String!
+  agency_digit: String
+  associated_document: String
+  bank_id: String!
+  default_account: Boolean!
+  id: String!
+  name: String!
+}
+
+input UpdateComplaintTypeInput {
+  description: String!
+  id: String!
+  name: String!
+}
+
+input UpdateProductImageOrderInput {
+  challenge_id: String!
+  id: String!
+  order: Float
+}
+
+input UpdateProductInput {
+  allow_buy_without_subscription: Boolean
+  available: Boolean
+  challenge_id: String
+  date_end: DateTime
+  date_initial: DateTime
+  description: String
+  free_field: Boolean
+  has_cost: Boolean
+  id: String!
+  name: String
+  order: Float
+}
+
+input UpdateProductVariationInput {
+  available: Boolean
+  available_quantity: Float
+  description: String
+  id: String!
+  initial_quantity: Float
+  order: Float
+  text: String
+}
+
+input UpdateProductVariationPriceInput {
+  challenge_id: String!
+  date_initial: DateTime
+  id: String!
+  value: Float
+}
+
+input UpdateProfileCompanyInput {
+  address_one: String!
+  address_two: String!
+  business_name: String!
+  city_id: String
+  company_id: String!
+  description: String
+  fantasy_name: String!
+  phone_number: String!
+  profile_avatar: String!
+  profile_cover: String!
+  profile_id: String!
+  register_number: String!
+  site: String!
+  username: String!
+  zip_code: String
+}
+
+input UpdateProfilePersonalInput {
+  address_line_one: String
+  address_line_two: String
+  city_id: String
+  date_of_birth: DateTime
+  description: String
+  firstname: String!
+  gender: String
+  lastname: String!
+  legal_registry_number: String
+  phone_number: String
+  profile_avatar: String
+  profile_cover: String
+  stature: Float
+  street_number: String
+  team_name: String
+  username: String!
+  weight: Float
+  zip_code: String
+}
+
+input UpdateSettingsProfileNotificationInput {
+  activities_received_email: Boolean = true
+  activities_received_push: Boolean = true
+  challenge_reminder_email: Boolean = true
+  challenge_reminder_push: Boolean = true
+  challenge_subscribed_received_email: Boolean = true
+  challenge_subscribed_received_push: Boolean = true
+  claps_email: Boolean = true
+  claps_push: Boolean = true
+  comment_claps_email: Boolean = true
+  comment_claps_push: Boolean = true
+  comment_response_email: Boolean = true
+  comment_response_push: Boolean = true
+  comments_email: Boolean = true
+  comments_push: Boolean = true
+  follower_new_email: Boolean = true
+  follower_new_push: Boolean = true
+  followers_request_email: Boolean = true
+  followers_request_push: Boolean = true
+  maintenance_reminder_email: Boolean = true
+  maintenance_reminder_push: Boolean = true
+  mentions_email: Boolean = true
+  mentions_push: Boolean = true
+  message_request_email: Boolean = true
+  message_request_push: Boolean = true
+  messages_received_email: Boolean = true
+  messages_received_push: Boolean = true
+  profile_id: String!
+}
+
+input UpdateSubscriptionWithdrawalAddressInput {
+  challenge_id: String!
+  challenge_withdrawal_address_id: String!
+  user_id: String!
+}
+
+input UpdateUserDataCompiledInput {
+  has_company: Boolean
+  integrated_with_garmin: Boolean
+  integrated_with_polar: Boolean
+  integrated_with_strava_crawler: Boolean
+  last_app_version_used: String
+  last_device_used: String
+  last_platform_used: String
+  last_time_used: String
+  verified_phone: Boolean
+  view_welcome_screen: Boolean
+}
+
+input UpdateUserInput {
+  city_id: String
+  date_of_birth: DateTime
+  email: String
+  firstname: String
+  gender: String
+  lastname: String
+  legal_registry_number: String
+  name: String
+  phone: String
+  stature: Float
+  team_name: String
+  weight: Float
+}
+
+input UserSettingsInput {
+  color_theme_device: Boolean!
+  dark_theme: Boolean!
+  measuring_unit: String!
+}
+
+input VerifyEmailInput {
+  code: String!
+  email: String!
+  isRegister: Boolean
+}
+
+
+"Parse string date to type Date"
+scalar CacheDate
+
+"The javascript `Date` as string. Type represents date and time as the ISO Date string."
+scalar DateTime
+
+"The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSONObject

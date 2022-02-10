@@ -1,0 +1,3 @@
+mutation disconnectGarmin($data: DisconnectThirdPartyProviderInput!) {
+  disconnectGarmin(data: $data)
+}

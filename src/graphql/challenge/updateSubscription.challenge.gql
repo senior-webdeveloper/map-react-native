@@ -1,0 +1,12 @@
+mutation UpdateSubscription($data: UpdateSubscriptionInput!) {
+  updateSubscription(data: $data) {
+		status
+    message
+    subscription {
+      user {
+        firstname
+        lastname
+      }
+    }
+  }
+}

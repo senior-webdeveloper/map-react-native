@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1010097698968",
+    "project_id": "riderize-dev",
+    "storage_bucket": "riderize-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010097698968:android:dcd79142abd8d70712f8ed",
+        "android_client_info": {
+          "package_name": "com.riderizedev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010097698968-l5lcpkkv5eeqcvp9dgv3565qr09moch1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ-xPrdvyaIeoksAiyt49sa5j7XP5LAB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010097698968-l5lcpkkv5eeqcvp9dgv3565qr09moch1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1010097698968-bh9ecsi2gspcg2vd5bno7p0gurptv49u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.riderizedev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+query ListCompanyUsers($company_id: String!){
+  listCompanyUsers(company_id: $company_id){
+    creator
+    user_id
+    user {
+       firstname
+      lastname
+      profile {
+        profile_avatar
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Write your query or mutation here
+mutation changeSubscriptionCategory($data: ChangeSubscriptionCategoryInput!) {
+  changeSubscriptionCategory(data: $data) {
+    id
+  }
+}

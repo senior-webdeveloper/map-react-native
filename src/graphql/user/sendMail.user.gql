@@ -1,0 +1,3 @@
+ mutation sendMail($data: SendEmailInput!) {
+    sendMail(data: $data)
+  }

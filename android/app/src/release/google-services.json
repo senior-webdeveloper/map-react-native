@@ -1,0 +1,147 @@
+{
+  "project_info": {
+    "project_number": "83042139125",
+    "firebase_url": "https://riderize-1589917557347.firebaseio.com",
+    "project_id": "riderize-1589917557347",
+    "storage_bucket": "riderize-1589917557347.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83042139125:android:a472f8bc99da1b70df3ebc",
+        "android_client_info": {
+          "package_name": "com.riderize"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83042139125-5kpmovh7715qf6h1kce7v7h4q3j186po.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize",
+            "certificate_hash": "a832fb6e6bf3f1ccc4cc680ebba172a2e05d927f"
+          }
+        },
+        {
+          "client_id": "83042139125-a9d4m7ah5utfvgrl2s4soetvf1lple0r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize",
+            "certificate_hash": "21ed12b50146cc371f611577f4b5a3b0db896fc8"
+          }
+        },
+        {
+          "client_id": "83042139125-d0q45e3kb6rk904a8eppjlk69qf64jn9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "83042139125-eur5g6935b6ubq4ng29p3uaifd6v5ei8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize",
+            "certificate_hash": "ea29e3f0d68712fbf4d33c43c9e7ccccc0de6e72"
+          }
+        },
+        {
+          "client_id": "83042139125-hccgcgnlfokpqm9p5q93rd9iuum01vcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbKT1fTcmst0KiqQkfDgrRfc89cWxTpgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83042139125-44jrd5de4f5hfa2toabfq0ho7i1slm4n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "83042139125-4jhm9elcdtu3b8hia549b497r831fp4s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.riderize"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83042139125:android:f3c4bdbf41560093df3ebc",
+        "android_client_info": {
+          "package_name": "com.riderize.development"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83042139125-2g2judlchimt5ttokdf9bpnq2t7lqomv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize.development",
+            "certificate_hash": "21ed12b50146cc371f611577f4b5a3b0db896fc8"
+          }
+        },
+        {
+          "client_id": "83042139125-a85ori74oai983k7ugs6f4gft3j4l6r6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize.development",
+            "certificate_hash": "ea29e3f0d68712fbf4d33c43c9e7ccccc0de6e72"
+          }
+        },
+        {
+          "client_id": "83042139125-lbal0hb4ocornh7ksisp9rgt44rfqcni.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize.development",
+            "certificate_hash": "a832fb6e6bf3f1ccc4cc680ebba172a2e05d927f"
+          }
+        },
+        {
+          "client_id": "83042139125-v6sp0r3jrg3k00ihjdhm028jdtuore3m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riderize.development",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "83042139125-hccgcgnlfokpqm9p5q93rd9iuum01vcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbKT1fTcmst0KiqQkfDgrRfc89cWxTpgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83042139125-44jrd5de4f5hfa2toabfq0ho7i1slm4n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "83042139125-4jhm9elcdtu3b8hia549b497r831fp4s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.riderize"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

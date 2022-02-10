@@ -1,0 +1,3 @@
+mutation DisconnectPolar($data: DisconnectThirdPartyProviderInput!) {
+  disconnectPolar(data: $data)
+}

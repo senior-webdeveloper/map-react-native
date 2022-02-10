@@ -1,0 +1,112 @@
+query getChallengeProductsPurchased(
+  $pagination: PaginationInput!
+  $data: ListAllChallengeProductsPurchasedInput!
+) {
+  getChallengeProductsPurchased(pagination: $pagination, data: $data) {
+    productsPurchased {
+      user_challenge_id
+      id
+      product_id
+      value
+      free_value
+      product_variation_id
+      canceled
+      user_id
+      user_challenge_id
+      quantity
+      variation {
+        id
+        text
+      }
+      product {
+        name
+        images {
+          link
+        }
+      }
+      created_at
+      user {
+        id
+        name
+        firstname
+        lastname
+        email
+        gender
+        stature
+        weight
+        phone
+        date_of_birth
+        legal_registry_number
+        phone
+        team_name
+      }
+      subscription {
+        id
+        created_at
+        challenge_id
+        user_id
+        challenge_category_id
+        short_id
+        registration_date
+        end_date
+        classification
+        total_time
+        total_distance
+        total_altimetry
+        total_friends
+        total_rides
+        drawn
+        completed
+        paid
+        start_time_first_activity
+        amount_paid
+        amount_to_pay
+        amount_freight
+        payment_id
+        last_payment_id
+        challenge_withdrawal_address_id
+        withdrawal_date
+        ready_to_withdraw
+        user_marked_withdrawn
+        bonus_subscription
+        total_time_seconds
+        athlete_identification
+        created_at
+        updated_at
+        subscription_status {
+          id
+          user_challenge_id
+          subscription_status_id
+          status_description {
+            id
+            code
+            name
+            description
+            translations {
+              language_code
+              name
+              description
+            }
+          }
+        }
+        last_payment {
+          ...PaymentFragment
+        }
+      }
+      created_at
+      updated_at
+      related_payment {
+        payment {
+          ...PaymentFragment
+        }
+      }
+    }
+    page_info {
+      current_page
+      offset
+      total_item_count
+      has_next_page
+      has_previous_page
+    }
+  }
+}

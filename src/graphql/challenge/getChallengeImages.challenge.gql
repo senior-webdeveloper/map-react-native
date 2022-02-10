@@ -1,0 +1,7 @@
+query	getChallengeImages($challenge_id: String!){
+  getChallengeImages(challenge_id: $challenge_id) {
+    id
+    link
+    order
+  }
+}

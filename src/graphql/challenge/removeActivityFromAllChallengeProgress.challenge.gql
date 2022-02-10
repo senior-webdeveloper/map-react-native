@@ -1,0 +1,5 @@
+mutation removeActivityFromAllChallengeProgress(
+  $data: DeleteUserChallengeActivityInput!
+) {
+  removeActivityFromAllChallengeProgress(data: $data)
+}

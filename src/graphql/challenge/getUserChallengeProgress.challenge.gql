@@ -1,0 +1,56 @@
+query GetUserChallengeProgress($data: GetUserChallengeProgressInput!) {
+  getUserChallengeProgress(data: $data) {
+    challenge_id
+    classification
+    completed
+    total_time_seconds
+    total_distance
+    total_altimetry
+    total_rides
+    category {
+      id
+      category_configuration {
+        altimetry_goal_value
+        distance_goal_value
+        maximum_time_goal_value
+        minimum_time_goal_value
+      }
+    }
+    user {
+      id
+      firstname
+      lastname
+      profile {
+        id
+        username
+        profile_avatar
+      }
+    }
+    activities {
+      activity {
+        id
+        third_party_data_source_slug
+        name
+        distance
+        start_date_local
+        start_date
+        elapsed_time_seconds
+        total_elevation_gain
+        calories
+        user_id
+      }
+
+    }
+    challenge {
+      name
+      image_avatar
+      start_date
+      end_date
+      challenge_type
+      configuration {
+        distance_goal_value
+        altimetry_goal_value
+      }
+    }
+  }
+}

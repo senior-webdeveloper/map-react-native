@@ -1,0 +1,30 @@
+query getUserActivitiesV2($pagination: PaginationInput!) {
+  getUserActivitiesV2(pagination: $pagination) {
+    activities {
+      id
+      name
+      distance
+      total_elevation_gain
+      start_date_local
+      suspicious
+      start_date_local
+      duplicated
+      moving_time_seconds
+      elapsed_time_seconds
+      third_party_data_source_slug
+      bounds
+      summary_polyline
+      min_bounds
+      max_bounds
+      thumbnail
+      processing
+    }
+    page_info {
+      current_page
+      offset
+      total_item_count
+      has_next_page
+      has_previous_page
+    }
+  }
+}

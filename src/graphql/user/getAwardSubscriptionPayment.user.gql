@@ -1,0 +1,31 @@
+# Write your query or mutation here
+query getAwardSubscriptionPayment($data: GetAwardSubscriptionInput!) {
+  getAwardSubscriptionPayment(data: $data) {
+    award_id
+    award {
+      id
+      name
+      description
+      price
+      awardsImages {
+        id
+        link
+      }
+      challenge_award_additional_requests {
+        additional_request {
+          id
+          request
+          image_reference
+          has_cost
+          price_request
+        }
+        possible_request_response {
+          id
+          response
+          image_reference
+          price
+        }
+      }
+    }
+  }
+}

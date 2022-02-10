@@ -1,0 +1,7 @@
+# Write your query or mutation here
+mutation CreateMonitorActivity($data: CreateMonitorActivityInput!) {
+  createMonitorActivity(data: $data) {
+    id
+    name
+  }
+}

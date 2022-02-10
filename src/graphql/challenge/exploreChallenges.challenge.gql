@@ -1,0 +1,28 @@
+# Write your query or mutation here
+query exploreChallengesV2($profile_id: String!, $page: Float!) {
+  exploreChallengesV2(profile_id: $profile_id, page: $page) {
+    page_info {
+      current_page
+      offset
+      total_item_count
+      has_next_page
+      has_previous_page
+    }
+    items {
+      name
+      key
+      type
+      content {
+        id
+        eligible_spotlight
+        name
+        image_avatar
+        image_cover
+        physical_event
+        configuration {
+          is_paid
+        }
+      }
+    }
+  }
+}

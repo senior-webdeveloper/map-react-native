@@ -1,0 +1,20 @@
+mutation BuyAwardUserAlreadySubscribed(
+  $shipping_address_id: String
+  $products_purchased: [ProductPurchasedInput!]
+  $award_data: ChallengePaymentInput
+  $payment_data: PaymentInput
+  $data: SubscribeUserChallengeInput!
+) {
+  buyAwardUserAlreadySubscribed(
+    shipping_address_id: $shipping_address_id
+    products_purchased: $products_purchased
+    award_data: $award_data
+    payment_data: $payment_data
+    data: $data
+  ) {
+    id
+    challenge_id
+    user_id
+    payment_id
+  }
+}

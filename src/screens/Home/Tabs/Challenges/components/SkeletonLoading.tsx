@@ -1,0 +1,119 @@
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
+import React from 'react';
+import { widthPercentageToDP } from '~/helpers/convertPixelToDP';
+
+export function SkeletonLoading() {
+  return (
+    <SkeletonPlaceholder position="absolute" top={0}>
+      <SkeletonPlaceholder.Item>
+        <SkeletonPlaceholder.Item
+          width={widthPercentageToDP('100')}
+          height={478}
+          borderRadius={16}
+        />
+        <SkeletonPlaceholder.Item
+          flexDirection="row"
+          alignItems="flex-start"
+          marginTop={16}
+        >
+          <SkeletonPlaceholder.Item>
+            <SkeletonPlaceholder.Item
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="space-between"
+              width={widthPercentageToDP('100')}
+              paddingHorizontal={16}
+            >
+              <SkeletonPlaceholder.Item
+                width={150}
+                height={26}
+                borderRadius={4}
+              />
+              <SkeletonPlaceholder.Item
+                width={90}
+                height={26}
+                borderRadius={4}
+              />
+            </SkeletonPlaceholder.Item>
+
+            <SkeletonPlaceholder.Item
+              flexDirection="row"
+              alignItems="flex-start"
+              marginTop={24}
+              paddingHorizontal={16}
+            >
+              <SkeletonPlaceholder.Item
+                width={148}
+                height={188}
+                borderRadius={16}
+              />
+              <SkeletonPlaceholder.Item
+                width={148}
+                height={188}
+                marginLeft={16}
+                borderRadius={16}
+              />
+              <SkeletonPlaceholder.Item
+                width={148}
+                height={188}
+                marginLeft={16}
+                borderRadius={16}
+              />
+            </SkeletonPlaceholder.Item>
+          </SkeletonPlaceholder.Item>
+        </SkeletonPlaceholder.Item>
+
+        <SkeletonPlaceholder.Item
+          flexDirection="row"
+          alignItems="flex-start"
+          marginTop={16}
+          paddingHorizontal={16}
+        >
+          <SkeletonPlaceholder.Item>
+            <SkeletonPlaceholder.Item
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="space-between"
+              width={widthPercentageToDP('100')}
+            >
+              <SkeletonPlaceholder.Item
+                width={150}
+                height={26}
+                borderRadius={4}
+              />
+              <SkeletonPlaceholder.Item
+                width={90}
+                height={26}
+                borderRadius={4}
+              />
+            </SkeletonPlaceholder.Item>
+
+            <SkeletonPlaceholder.Item
+              flexDirection="row"
+              alignItems="flex-start"
+              marginTop={24}
+            >
+              <SkeletonPlaceholder.Item
+                width={148}
+                height={188}
+                borderRadius={16}
+              />
+              <SkeletonPlaceholder.Item
+                width={148}
+                height={188}
+                marginLeft={16}
+                borderRadius={16}
+              />
+              <SkeletonPlaceholder.Item
+                width={148}
+                height={188}
+                marginLeft={16}
+                borderRadius={16}
+              />
+            </SkeletonPlaceholder.Item>
+          </SkeletonPlaceholder.Item>
+        </SkeletonPlaceholder.Item>
+      </SkeletonPlaceholder.Item>
+    </SkeletonPlaceholder>
+  );
+}

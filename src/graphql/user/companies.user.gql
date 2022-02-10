@@ -1,0 +1,12 @@
+query userCompanies {
+    userCompanies {
+      id
+      fantasy_name
+      site
+      profile {
+        id
+        profile_avatar
+        profile_cover
+      }
+    }
+  }

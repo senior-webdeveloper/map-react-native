@@ -1,0 +1,27 @@
+query GetUserDataCompiled {
+  getUserDataCompiled {
+    data_compiled {
+      _id
+      user_id
+      integrated_with_apple_health
+      integrated_with_google_fit
+      integrated_with_garmin
+      integrated_with_polar
+      has_company
+      last_upload_google_fit
+      last_upload_apple_health
+      last_upload_polar
+      last_upload_garmin
+      view_welcome_screen
+      integrated_with_strava
+    }
+
+    third_party_data {
+      id_data_source
+      third_party_data_source {
+        slug
+
+      }
+    }
+  }
+}

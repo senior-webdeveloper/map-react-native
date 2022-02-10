@@ -1,0 +1,3 @@
+ mutation unsubscribeUserChallenge($challenge_id: String!) {
+    unsubscribeUserChallenge(challenge_id: $challenge_id)
+  }

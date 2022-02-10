@@ -1,0 +1,5 @@
+<resources>
+<!--    <string name="app_name">Riderize</string>-->
+    <string name="facebook_app_id">658541761668650</string>
+    <string name="fb_login_protocol_scheme">fb658541761668650</string>
+</resources>

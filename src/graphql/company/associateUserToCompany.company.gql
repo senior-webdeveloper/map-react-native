@@ -1,0 +1,9 @@
+mutation AssociateUserToCompany($data: AssociateUserWithCompanyInput!
+ ){
+  associateUserToCompany(data: $data){
+    creator
+    company_id
+    user_id
+    company_function_id
+  }
+}

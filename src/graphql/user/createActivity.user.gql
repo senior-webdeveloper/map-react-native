@@ -1,0 +1,6 @@
+mutation createActivityV2($activities_data: [CreateActivityInput!]!) {
+  createActivityV2(activities_data: $activities_data) {
+    status
+    message
+  }
+}

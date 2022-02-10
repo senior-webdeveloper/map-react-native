@@ -1,0 +1,37 @@
+query getProductsByChallengeId($challenge_id: String!) {
+  getProductsByChallengeId(challenge_id: $challenge_id) {
+    id
+    name
+    description
+    date_initial
+    date_end
+    available
+    order
+    has_cost
+    allow_buy_without_subscription
+    free_field
+    active
+    challenge_id
+    variations {
+      id
+      product_id
+      text
+      description
+      available_quantity
+      available
+      order
+      active
+      prices {
+        value
+        date_initial
+        active
+      }
+      images {
+        link
+        order
+        active
+      }
+    }
+  }
+}
+

@@ -1,0 +1,5 @@
+ mutation verifyEmailCode($data: VerifyEmailInput!) {
+    verifyEmailCode(data: $data) {
+      email
+    }
+  }

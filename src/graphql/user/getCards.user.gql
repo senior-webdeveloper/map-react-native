@@ -1,0 +1,19 @@
+query getCards(
+  $pagination: PaginationInput!
+  $user_id: String!
+) {
+  getCards(pagination: $pagination, user_id: $user_id) {
+    id
+    name
+    brand
+    last_digits
+    external_id
+    brand
+    holder_name
+    first_digits
+    valid
+    expiration_date
+    main
+    legal_holder_number
+  }
+}

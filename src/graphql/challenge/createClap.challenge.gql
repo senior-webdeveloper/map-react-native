@@ -1,0 +1,5 @@
+ mutation createClap($data: CreateClapInput!) {
+    createClap(data: $data) {
+      count
+    }
+  }

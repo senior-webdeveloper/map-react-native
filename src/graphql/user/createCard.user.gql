@@ -1,0 +1,18 @@
+mutation createCard(
+  $data: CreateCardInput!
+) {
+  createCard(data: $data) {
+    id
+    name
+    brand
+    last_digits
+    external_id
+    brand
+    holder_name
+    first_digits
+    valid
+    expiration_date
+    main
+    legal_holder_number
+  }
+}

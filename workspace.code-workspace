@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\Germany project\\css-tbl-assignment"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\buchung"
+		},
+		{
+			"path": "src"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "css-tbl-assignment"
+	}
+}

@@ -1,0 +1,59 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+IS_CI = ENV['CI']
+platform :ios, '11.0'
+
+abstract_target 'App' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => false
+  )
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+  # use_flipper!()
+
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+  pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways"
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+  pod 'Permission-MediaLibrary', :path => "#{permissions_path}/MediaLibrary"
+  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+  pod 'RNFS', :path => '../node_modules/react-native-fs'
+  pre_install do |installer|
+    $RNMBGL.pre_install(installer)
+  end
+
+  target 'Riderize' do
+    #Production-specific pods
+    target 'RiderizeTests' do
+      inherit! :complete
+      # Pods for testing
+    end
+  end
+  target 'RiderizeDevelopment' do
+    #Development-specific pods
+  end
+
+
+end
+
+
+
+target 'OneSignalNotificationServiceExtension' do
+  pod 'OneSignal', '>= 3.0', '< 4.0'
+end
+target 'OneSignalNotificationServiceExtensionDevelopment' do
+  pod 'OneSignal', '>= 3.0', '< 4.0'
+end
+
+post_install do |installer|
+  $RNMBGL.post_install(installer)
+  react_native_post_install(installer)
+end

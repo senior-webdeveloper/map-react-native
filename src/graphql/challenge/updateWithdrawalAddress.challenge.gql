@@ -1,0 +1,7 @@
+mutation UpdateWithdrawalAddress(
+  $data: UpdateSubscriptionWithdrawalAddressInput!
+) {
+  updateWithdrawalAddress(data: $data) {
+    id
+  }
+}

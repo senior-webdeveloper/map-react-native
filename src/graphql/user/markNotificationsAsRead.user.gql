@@ -1,0 +1,6 @@
+mutation markNotificationsAsRead($data: ListUserNotificationsInput!) {
+  markNotificationsAsRead(data: $data) {
+    push_title
+    read
+  }
+}
